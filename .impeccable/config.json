@@ -104,6 +104,12 @@
         "value": "128px",
         "createdAt": "2026-10-14T14:27:17.632Z",
         "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "shape-assembled-illustration",
+        "value": "inline <svg> scene: 9 primitive shapes, ~360x260px, 4 fill colors",
+        "createdAt": "2026-10-14T22:31:57.468Z",
+        "reason": "deliberate still route diagram (NJ pin, dotted route, FL pin, car) chosen over animation for a 40-70 audience; placeholder slot for Ed's photo"
       }
     ]
   }
