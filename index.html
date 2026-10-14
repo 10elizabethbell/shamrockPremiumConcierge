@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Shamrock Transportation · You fly, I'll drive · NJ ↔ Florida</title>
+<title>Shamrock Transportation · You fly, I'll drive · New Jersey to Florida</title>
 <meta name="description" content="Edward Brannagan drives your car between New Jersey and Florida while you fly. Pack it full. Call 732-300-3835 for your route's rate.">
 <meta name="theme-color" content="#11352a">
 <link rel="canonical" href="https://10elizabethbell.github.io/shamrockPremiumConcierge/">
@@ -78,19 +78,20 @@ p{margin:0;text-wrap:pretty}
 .brand svg{width:38px;height:42px}
 .brand b{display:block;font:600 25px/1 var(--serif);letter-spacing:.01em;color:var(--cream)}
 .brand small{display:block;margin-top:4px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
+.arw{display:inline-block;width:1.4em;height:.7em;vertical-align:middle;margin:0 .3em;color:var(--gold)}
 .top-route{display:none;font:500 15px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--cream-soft)}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:
   radial-gradient(120% 70% at 85% 0%,rgba(70,169,106,.16),transparent 60%),
   linear-gradient(180deg,var(--g-900) 0%,#0f3126 100%)}
-.hero-copy{position:relative;z-index:2;padding:30px var(--gutter) 0;max-width:1160px;width:100%;margin:0 auto}
+.hero-copy{position:relative;z-index:2;padding:16px var(--gutter) 0;max-width:1160px;width:100%;margin:0 auto}
 .hero h1{font-size:clamp(58px,17vw,112px);line-height:.92;letter-spacing:-.02em;color:var(--cream)}
 .hero h1 em{display:block;font-style:italic;font-weight:500;color:var(--gold)}
 .promise{margin-top:18px;max-width:30ch;font-size:clamp(18px,4.9vw,21px);line-height:1.5;color:var(--cream-soft)}
 .promise strong{color:var(--cream);font-weight:600}
-.hero-actions{display:grid;gap:12px;margin-top:24px;max-width:420px}
-.road{position:relative;flex:1 1 auto;min-height:230px;margin-top:20px;touch-action:none;cursor:grab;
+.hero-actions{display:grid;gap:12px;margin-top:20px;max-width:420px}
+.road{position:relative;flex:1 1 auto;min-height:230px;margin-top:6px;touch-action:none;cursor:grab;
   /* still frame before JS: faint light trails */
   background:
     linear-gradient(90deg,transparent 10%,rgba(201,169,106,.22) 30%,transparent 46%) 0 34%/100% 2px no-repeat,
@@ -98,8 +99,10 @@ p{margin:0;text-wrap:pretty}
 .road:active{cursor:grabbing}
 .road.live{background:none}
 .road canvas{position:absolute;inset:0;width:100%;height:100%}
-.road-hint{position:absolute;right:var(--gutter);top:6px;font:500 15px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:rgba(239,231,212,.75);pointer-events:none;transition:opacity 1.2s var(--ease-out)}
+.road-hint{position:absolute;right:var(--gutter);top:6px;font:500 16px/1.3 var(--sans);color:rgba(239,231,212,.8);pointer-events:none;transition:opacity 1.2s var(--ease-out)}
 .road.driven .road-hint{opacity:0}
+.h-mouse{display:none}
+@media (hover:hover) and (pointer:fine){.h-mouse{display:inline}.h-touch{display:none}}
 
 /* ---------- Lane-line dividers ---------- */
 .lane{display:block;height:44px;margin:-1px 0;position:relative;z-index:1}
@@ -139,9 +142,9 @@ section{padding:64px 0 72px}
 .where-list{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule-light)}
 .where-list li{padding:18px 0;border-bottom:1px solid var(--rule-light);font:600 clamp(27px,7vw,34px)/1.2 var(--serif);color:var(--ink)}
 .where-list li small{display:block;margin-top:6px;font:400 17px/1.4 var(--sans);color:var(--ink-soft)}
-.rates{position:relative;padding:34px 26px 30px;border-radius:22px;background:var(--paper);box-shadow:var(--shadow-soft);border:1px solid rgba(138,103,40,.22)}
+.rates{position:relative;padding:38px 28px 32px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px}
 .rates .h2{font-size:clamp(40px,10.5vw,60px)}
-.rates blockquote{margin:18px 0 0;font:italic 500 clamp(28px,7.6vw,36px)/1.15 var(--serif);color:var(--gold-deep)}
+.rates .h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
 .rates p{margin-top:14px;color:var(--ink-soft)}
 .rates .btn{margin-top:24px}
 
@@ -152,6 +155,7 @@ section{padding:64px 0 72px}
 .trust-list h3{font-size:clamp(32px,8vw,42px);color:var(--gold)}
 .trust-list p{margin-top:8px;color:var(--cream-soft);max-width:40ch}
 .trust .h2{max-width:14ch}
+@media (min-width:760px){.trust .h2{max-width:none}}
 
 /* FAQ */
 .faq-list{margin-top:32px;max-width:820px;interpolate-size:allow-keywords}
@@ -221,8 +225,8 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   .top{padding-top:28px}
   .top-route{display:block}
   .hero-copy{padding-top:56px}
-  .hero-actions{grid-template-columns:auto auto;justify-content:start;max-width:none}
-  .road{position:absolute;left:0;right:0;bottom:0;height:62%;min-height:0;margin:0}
+  .hero-actions{grid-template-columns:auto auto;justify-content:start;max-width:max-content}
+  .road{position:absolute;left:0;right:0;top:0;bottom:0;min-height:0;margin:0}
   .hero-copy{padding-bottom:300px}
   .road-hint{top:auto;bottom:18px}
   section{padding:104px 0 112px}
@@ -242,7 +246,10 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   .pack-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:64px}
   .where-grid{grid-template-columns:1fr 1fr;align-items:start;gap:64px}
   .est-grid{grid-template-columns:1fr 1.05fr;align-items:start;gap:64px}
-  .est-grid>div:first-child{position:sticky;top:96px}
+  .est-grid{align-items:center}
+  .faq .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
+  .faq .h2{position:sticky;top:96px}
+  .faq-list{margin-top:0;max-width:none}
 }
 @media (min-width:1100px){
   .hero h1{font-size:128px}
@@ -262,7 +269,7 @@ THESIS: A night highway seen from above, rendered like a long-exposure photograp
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, taillight red only in the motion. Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and dashed lane-line dividers that flow like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
 STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: pack it full (the differentiator), how it works in three stops, where he drives + rates by phone, why one driver, honest FAQ, text-or-call estimate.
 FIRST VIEWPORT (phone 390x~700): shamrock wordmark top-left; "You fly. / I'll drive." huge serif, second line gold italic; one-sentence promise; full-width gold "Call Ed" button with the number, outlined "Get a rate estimate" under it; the light-trail highway fills the bottom of the screen and Ed's car drives across it on its own until touched.
-FORM: Single-scroll one-pager, phone-first; signature = touchable long-exposure highway canvas (hero) + flowing lane-line dividers + car riding the route line in "How it works". Code-led build (no comp round, unattended).
+FORM: Single-scroll one-pager, phone-first; signature = touchable long-exposure highway canvas (hero) + flowing lane-line dividers + car riding the route line in "How it works". Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -287,7 +294,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <svg style="color:var(--leaf)" aria-hidden="true"><use href="#shamrock"/></svg>
       <span><b>Shamrock</b><small>Transportation</small></span>
     </a>
-    <span class="top-route">New Jersey ↔ Florida</span>
+    <span class="top-route">New Jersey <svg class="arw" viewBox="0 0 24 12" aria-label="to and from"><path d="M4 3.5h17M17 1l3.5 2.5L17 6M20 8.5H3M7 6l-3.5 2.5L7 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Florida</span>
   </div>
 
   <div class="hero-copy">
@@ -301,7 +308,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <div class="road" id="road" aria-hidden="true">
     <canvas id="roadCanvas"></canvas>
-    <span class="road-hint">Touch the road to drive</span>
+    <span class="road-hint"><span class="h-touch">Drag on the road to drive</span><span class="h-mouse">Move over the road to drive</span></span>
   </div>
 </header>
 
@@ -348,15 +355,14 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div>
       <h2 class="h2">Where I drive</h2>
       <ul class="where-list">
-        <li>New Jersey ↔ Florida<small>South for the winter, north for the summer.</small></li>
+        <li>New Jersey to Florida and back<small>South for the winter, north for the summer.</small></li>
         <li>Local &amp; long distance</li>
         <li>Airport service anywhere in Florida</li>
       </ul>
     </div>
     <!-- RATES PLACEHOLDER: Ed's real rates pending (brief: confirm Thursday). Replace the paragraph below once confirmed; never invent numbers. -->
     <div class="rates" id="rates">
-      <h2 class="h2">Rates</h2>
-      <blockquote>Very reasonable rates.</blockquote>
+      <h2 class="h2"><em>Very reasonable rates.</em></h2>
       <p>Every route gets its own flat rate. Call with where the car is, where it's going and when, and I'll give you the price on the phone.</p>
       <a class="btn btn-green" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>Call for your rate</a>
     </div>
@@ -368,10 +374,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="trust on-dark" id="trust">
   <div class="wrap">
     <h2 class="h2">The man you call is the man who drives.</h2>
+    <!-- CONFIRM WITH ED: sole driver, one car per trip -->
     <ul class="trust-list">
       <li><h3>One driver: me</h3><p>I'm Edward Brannagan, owner and driver of Shamrock Transportation. I'm the one who drives your car.</p></li>
       <li><h3>One car at a time</h3><p>I drive one car on every trip, and on your trip it's yours.</p></li>
-      <li><h3>A call away</h3><p>The number on this page is my cell. Call it before, during or after the drive.</p></li>
+      <li><h3>A call away</h3><p>The number on this page is my cell.</p></li>
     </ul>
   </div>
 </section>
@@ -451,7 +458,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <div class="foot-meta">
       <span>Edward Brannagan, owner &amp; driver</span>
       <a href="tel:+17323003835">732-300-3835</a>
-      <span>New Jersey ↔ Florida</span>
+      <span>New Jersey <svg class="arw" viewBox="0 0 24 12" aria-label="to and from"><path d="M4 3.5h17M17 1l3.5 2.5L17 6M20 8.5H3M7 6l-3.5 2.5L7 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Florida</span>
     </div>
     <p class="fine">© 2026 Shamrock Transportation</p>
   </div>
@@ -476,9 +483,9 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     PUSH: PHONE ? 30 : 40,          // how far lanes part around the car
     SPRING: 38, DAMP: 7.5,
     IDLE_MS: 2600,                  // hand the wheel back after this long untouched
-    LANE_TOP: PHONE ? .14 : .40,    // road band inside the canvas (fractions of its height, at the left edge)
-    LANE_BOT: PHONE ? .86 : .96,
-    TILT: PHONE ? 0 : .52           // desktop: the road sweeps up toward the right, away from the text
+    LANE_TOP: PHONE ? .10 : .50,    // road band inside the canvas (fractions of its height, at the left edge)
+    LANE_BOT: PHONE ? .62 : .97,
+    TILT: PHONE ? 0 : .36           // desktop: the road sweeps up toward the right, away from the text
   };
   var road = document.getElementById('road');
   var cv = document.getElementById('roadCanvas');
@@ -505,14 +512,20 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
   }
 
   // the hero copy's box in canvas coordinates (desktop overlaps it; phone stacks below it)
-  var clear = null;
+  var clear = null, clearTop = null;
   function measureClear() {
     var copy = document.querySelector('.hero-actions'), h1 = document.querySelector('.hero h1');
     if (!copy || !h1) return;
-    var r = road.getBoundingClientRect(), a = h1.getBoundingClientRect(), b = copy.getBoundingClientRect();
+    function textRight(node) { var rg = document.createRange(); rg.selectNodeContents(node); return rg.getBoundingClientRect().right; }
+    var pr = document.querySelector('.promise').getBoundingClientRect(), ar = h1.getBoundingClientRect();
+    ar = { left: ar.left, top: ar.top, right: Math.max(textRight(h1.firstChild), textRight(h1.querySelector('em').firstChild)) };
+    var r = road.getBoundingClientRect(), b = copy.getBoundingClientRect();
+    var a = { left: ar.left, top: ar.top, right: Math.max(ar.right, pr.right) };
     var x = Math.min(a.left, b.left) - r.left - 28, y = a.top - r.top - 28;
     var w = Math.max(a.right, b.right) - Math.min(a.left, b.left) + 56, h = b.bottom - a.top + 56;
     clear = (y + h > 0) ? { x: x, y: y, w: w, h: h } : null;
+    var tb = document.querySelector('.top').getBoundingClientRect();
+    clearTop = { x: 0, y: tb.top - r.top - 10, w: W, h: tb.height + 30 };
   }
   function build() {
     lanes = []; streaks = [];
@@ -684,6 +697,7 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
       ctx.globalCompositeOperation = 'destination-out';
       ctx.shadowColor = '#000'; ctx.shadowBlur = 36; ctx.shadowOffsetX = 20000;
       ctx.fillStyle = '#000'; ctx.fillRect(clear.x - 20000, clear.y, clear.w, clear.h);
+      if (clearTop && clearTop.y + clearTop.h > 0) ctx.fillRect(clearTop.x - 20000, clearTop.y, clearTop.w, clearTop.h);
       ctx.shadowColor = 'transparent'; ctx.shadowBlur = 0; ctx.shadowOffsetX = 0;
       ctx.globalCompositeOperation = 'source-over';
     }
