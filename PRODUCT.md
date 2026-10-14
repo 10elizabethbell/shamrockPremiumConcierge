@@ -5,7 +5,7 @@
 - Stack: static single-file HTML/CSS/JS (`index.html`), self-hosted display font in `fonts/`, hosted on GitHub Pages.
 
 ## Users
-- **Primary:** snowbirds, mostly 60+, who winter in Florida and summer in New Jersey. They fly between the two and need their car driven the other way. They read on a phone, often inside Facebook's in-app browser, and trust a phone call more than a form. (Age skew per Muse brief; inferred, not measured.)
+- **Primary:** snowbirds, ages 40-70 (Ellie, 2026-10-14), who winter in Florida and summer in New Jersey. They fly between the two and need their car driven the other way. They read on a phone, often inside Facebook's in-app browser, and trust a phone call more than a form. Design for confident decision-making, not an age stereotype: clarity, no hidden or learned interactions, calm motion (research brief, Ellie, 2026-10-14).
 - **Secondary:** the owner, Edward (Ed) Brannagan, who sees the site first and should recognize his business, done better than he imagined.
 
 ## Purpose
@@ -30,10 +30,11 @@ Driveaway, not trailer shipping: one driver, the owner, drives your own car betw
 
 ## Evidence on hand
 - Business card facts only (via Muse brief 2026-10-13). No photos, reviews or rates.
+- UX research brief for this audience (Ellie, 2026-10-14: "NJ_Florida_Vehicle_Delivery_Website_Research_and_Design_Brief_Ages_40_to_70.pdf", Downloads). Key points: first screen answers what / who / where / how to contact; owner visible as a real person; phone number in the header; static 3-step process; short contact path; no hidden interactions or gratuitous motion; trust questions (insurance, pricing inclusions, reviews) answered only with verified facts.
 
 ## Principles
 1. Never invent: rates, insurance, reviews, photos, towns, years. Unknowns are placeholders or omitted.
 2. Calling Ed is the primary action, reachable from every section.
-3. Big type and big tap targets for a 60+ audience on phones.
+3. Big type and big tap targets for a 40-70 audience on phones; nothing hidden, dragged or hover-only.
 4. "Pack the car full" is the headline differentiator after the hero.
 5. Honest objection handling (when a trailer shipper is the better choice) builds trust.

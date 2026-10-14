@@ -79,7 +79,15 @@ p{margin:0;text-wrap:pretty}
 .brand b{display:block;font:600 25px/1 var(--serif);letter-spacing:.01em;color:var(--cream)}
 .brand small{display:block;margin-top:4px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .arw{display:inline-block;width:1.4em;height:.7em;vertical-align:middle;margin:0 .3em;color:var(--gold)}
-.top-route{display:none;font:500 15px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--cream-soft)}
+.top-nav{display:none}
+.top-nav a,.top-call{text-decoration:none;border-radius:6px;outline:2px solid transparent;outline-offset:4px;transition:outline-color .2s}
+.top-nav a:hover,.top-call:hover{outline-color:var(--cream)}
+.top-call{display:flex;align-items:center;gap:7px;min-height:48px;padding:0 2px;font:600 17px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--cream)}
+.top-call svg{width:19px;height:19px;color:var(--gold)}
+.eyebrow{font:600 17px/1.4 var(--sans);color:var(--gold);margin-bottom:12px}
+.on-light .eyebrow{color:var(--gold-deep)}
+.eb-route{display:none}
+.top-call{white-space:nowrap}
 
 /* ---------- Hero ---------- */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;overflow:hidden;background:
@@ -181,6 +189,9 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   :root{--gutter:16px}
   .btn{font-size:18px;padding:0 18px}
   .brand b{font-size:22px}
+  .brand small{letter-spacing:.14em}
+  .top-call{font-size:16px}
+  .top-call svg{width:16px;height:16px}
 }
 
 /* ---------- Desktop ---------- */
@@ -188,7 +199,10 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   :root{--gutter:40px}
   body{font-size:19px}
   .top{padding-top:28px}
-  .top-route{display:block}
+  .eb-route{display:inline}
+  .top-nav{display:flex;gap:28px;margin-left:auto;margin-right:36px;font:500 17px/1 var(--sans);color:var(--cream-soft)}
+  .top-nav a{padding:12px 2px}
+  .top-call{font-size:19px}
   .hero-copy{padding-top:56px}
   .hero-actions{grid-template-columns:auto auto;justify-content:start;max-width:max-content}
   .road{position:absolute;left:0;right:0;top:0;bottom:0;min-height:0;margin:0}
@@ -243,15 +257,17 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <svg style="color:var(--leaf)" aria-hidden="true"><use href="#shamrock"/></svg>
       <span><b>Shamrock</b><small>Transportation</small></span>
     </a>
-    <span class="top-route">New Jersey <svg class="arw" viewBox="0 0 24 12" aria-label="to and from"><path d="M4 3.5h17M17 1l3.5 2.5L17 6M20 8.5H3M7 6l-3.5 2.5L7 11" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg> Florida</span>
+    <nav class="top-nav" aria-label="Sections"><a href="#how">How it works</a><a href="#about">Meet Ed</a><a href="#estimate">Rates</a></nav>
+    <a class="top-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>732-300-3835</a>
   </div>
 
   <div class="hero-copy">
+    <p class="eyebrow">Personal car delivery<span class="eb-route"> · New Jersey &amp; Florida</span></p>
     <h1>You fly.<em>I'll drive.</em></h1>
-    <p class="promise">I drive your car between <strong>New Jersey and Florida</strong>, down for winter and back for summer, while you fly.</p>
+    <p class="promise">I'm Ed Brannagan. I drive your car between <strong>New Jersey and Florida</strong> myself while you fly, and you talk to me directly.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>Call Ed <span class="num">732-300-3835</span></a>
-      <a class="btn btn-ghost" href="#estimate">Get your rate</a>
+      <a class="btn btn-ghost" href="#est">Text me instead</a>
     </div>
   </div>
 
@@ -299,6 +315,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
   <div class="wrap about-grid">
     <!-- CONFIRM WITH ED: sole driver, one car per trip -->
     <div>
+      <p class="eyebrow">Meet your driver</p>
       <h2 class="h2">The man you call is the man who drives.</h2>
       <p class="lede">I'm Edward Brannagan, owner and driver of Shamrock Transportation. I drive one car at a time, and the number on this page is my cell.</p>
       <ul class="facts">
@@ -337,7 +354,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="field"><label for="f-when">About when? <i>(optional)</i></label><input id="f-when" name="when" placeholder="For example, early November"></div>
       <button class="btn btn-green" type="submit">Text my details to Ed</button>
       <p class="form-ok" role="status" hidden>If your messages app didn't open, call or text me at <a href="tel:+17323003835">732-300-3835</a>.</p>
-      <p class="form-foot">This opens a text message to me with your details filled in. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
+      <p class="form-foot">This opens a text message to me with your details filled in. Send it, and I'll get back to you with your rate. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
     </form>
   </div>
 </section>
@@ -377,7 +394,7 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     CAR_LEN: PHONE ? 36 : 44, CAR_W: PHONE ? 17 : 20,
     CAR_SPEED: PHONE ? 38 : 50,     // px/s, one lane, no weaving
     LANE_TOP: PHONE ? .10 : .50,    // road band inside the canvas (fractions of its height, at the left edge)
-    LANE_BOT: PHONE ? .62 : .97,
+    LANE_BOT: PHONE ? .50 : .97,
     TILT: PHONE ? 0 : .36           // desktop: the road sweeps up toward the right, away from the text
   };
   var road = document.getElementById('road');
@@ -407,8 +424,8 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     var copy = document.querySelector('.hero-actions'), h1 = document.querySelector('.hero h1');
     if (!copy || !h1) return;
     function textRight(node) { var rg = document.createRange(); rg.selectNodeContents(node); return rg.getBoundingClientRect().right; }
-    var pr = document.querySelector('.promise').getBoundingClientRect(), ar = h1.getBoundingClientRect();
-    ar = { left: ar.left, top: ar.top, right: Math.max(textRight(h1.firstChild), textRight(h1.querySelector('em').firstChild)) };
+    var pr = document.querySelector('.promise').getBoundingClientRect(), ar = h1.getBoundingClientRect(), eb = document.querySelector('.hero .eyebrow');
+    ar = { left: ar.left, top: eb ? eb.getBoundingClientRect().top : ar.top, right: Math.max(textRight(h1.firstChild), textRight(h1.querySelector('em').firstChild)) };
     var r = road.getBoundingClientRect(), b = copy.getBoundingClientRect();
     var a = { left: ar.left, top: ar.top, right: Math.max(ar.right, pr.right) };
     var x = Math.min(a.left, b.left) - r.left - 28, y = a.top - r.top - 28;

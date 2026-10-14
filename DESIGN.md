@@ -204,7 +204,7 @@ Single-scroll, phone-first one-pager. Content sits in a centered wrap (max 1160p
 **Breakpoints** (min-width unless noted):
 - **base (phone)**: everything stacks; hero buttons stack full-width (max 420px); the road sits below the hero copy and fills the rest of the first screen (min 230px).
 - **max 370px**: narrower gutter, smaller button text and padding, smaller wordmark.
-- **760px**: gutter 40px, body 19px, top-bar route appears, hero buttons sit side by side, the road goes full-bleed behind the hero copy, journey becomes a 2-column grid, footer 3 columns. Lane seams 44 to 60px tall.
+- **760px**: gutter 40px, body 19px, top-bar nav links appear, hero buttons sit side by side, the road goes full-bleed behind the hero copy, journey becomes a 2-column grid, footer 3 columns. Lane seams 44 to 60px tall.
 - **960px**: pack, about and estimate go two-column (64px gap).
 - **1100px**: hero h1 fixed at 128px; form fields pair up two per row.
 
@@ -255,7 +255,10 @@ Three numbered steps. Each number sits in a 44px gold-ringed circle (serif linin
 Paper card on green, 22px radius, form-float shadow, sets `--ring: gold-deep`. Labels 18px 600 ink above fields; "(optional)" set in normal-weight ink-soft. Inputs white, 1.5px ink-at-28% border, 12px radius, 56px min height; hover and focus switch border and outline to gold-deep. Errors: brick border plus a 17px brick message under the field, linked with `aria-describedby`. Submit is a full-width green button. It composes an SMS, not a server post.
 
 ### Navigation
-No nav menu. The top bar is the shamrock wordmark (leaf-green mark, cream serif "Shamrock", gold tracked "Transportation") and, from 760px, the "New Jersey <-> Florida" route label. Both wordmarks (top, footer) link back to the top.
+The top bar is the shamrock wordmark (leaf-green mark, cream serif "Shamrock", gold tracked "Transportation") on the left and Ed's number as a tap-to-call link (gold phone icon, cream 16-19px, never wraps) on the right, at every width. From 760px three plain text links sit before the number: How it works, Meet Ed, Rates. No menu button, no dropdown. Both wordmarks (top, footer) link back to the top.
+
+### Eyebrow
+One short sentence-case line in 17px 600 sans above a heading (gold on green, gold-deep on ivory). Used twice: the hero ("Personal car delivery", plus " · New Jersey & Florida" from 760px) and "Meet your driver" above the about h2. Never all caps, never tracked.
 
 ### Hero highway canvas (signature)
 A full 2D canvas behind (desktop) or below (phone) the hero copy. Ambient only: `pointer-events:none`, so a finger on it scrolls the page. Tune it through the `CFG` block at the top of the hero script; don't hand-edit draw code for tuning.

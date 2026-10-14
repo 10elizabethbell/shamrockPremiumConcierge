@@ -7,10 +7,21 @@
 - **Signature element:** in the hero, slow light trails drift along a night highway and Ed's car cruises steadily through one lane. It's ambient only: nothing to drag or hover, and a finger on it scrolls the page. On phones the road fills the bottom of the first screen (car visible even at Facebook-browser height, ~390x660); on desktop it sweeps up through the right half and is erased softly behind the headline and buttons so nothing runs through text. Tunable constants sit at the top of the hero script (`CFG`: lanes, streaks, speeds, `CAR_SPEED`, `LANE_TOP/BOT`, `TILT`).
 - **Carried through the page:** still, wavy section seams with a gold dashed lane marking painted just inside the lower colour. Nothing below the hero moves.
 - **Simplified 2026-10-14 (Ellie: audience is 40-70, first version was too much):** removed the drivable car, the drag hint, the moving seams and the scroll-driven step car; cut "Where I drive", the separate rates card, the 3-part trust list and the FAQ accordion (no hidden content now); form cut from 6 fields to 4 with plain-question labels.
-- **Sections (5 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; promise says both directions) → Pack it full (the #1 differentiator) → How it works (numbered 1-2-3: Call me / Fly / Your car is waiting) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." (call for your flat rate, huge tap-to-call number, text form) → footer.
+- **Sections (5 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, promise names Ed) → Pack it full (the #1 differentiator) → How it works (numbered 1-2-3: Call me / Fly / Your car is waiting) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." (call for your flat rate, huge tap-to-call number, text form) → footer.
 - **Contact:** every call link is `tel:+17323003835`. The estimate form (name, where the car is, where it's going, optional when) validates the three required fields (errors linked to the fields for screen readers) and opens a pre-filled text to the same number (tested: the body decodes correctly). While it opens, the button reads "Opening your messages…", then a line appears with the number in case nothing opened (desktop and some in-app browsers ignore `sms:`). Hero has exactly two buttons: Call Ed (filled gold) and Get your rate (outlined).
 - **Reviewed:** Impeccable's detector plus a sweep of every mode except live/onboard, and the finish reviewer (verdict "fix first"); all their material fixes are applied. Detector leftovers are intentional and recorded in `.impeccable/config.json` (tight leading on display headings; green-tinted offset shadow flagged as a glow).
 - **Shareables:** `og.png` 1200x630 for the Facebook preview, shamrock favicon (SVG) and `apple-touch-icon.png`.
+
+## Research brief applied (2026-10-14)
+Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
+- Header: Ed's number as a tap-to-call link on every screen size; desktop adds 3 plain links (How it works, Meet Ed, Rates).
+- Hero answers what / who / where / contact in one screen: eyebrow "Personal car delivery · New Jersey & Florida", promise now opens "I'm Ed Brannagan" and says you talk to him directly. Second button is now "Text me instead" (jumps to the text form).
+- "Meet your driver" label over the about section; form now says what happens next ("I'll get back to you with your rate").
+- Not applied, on purpose:
+  - **Sticky mobile Call button:** conflicts with your no-sticky-bar rule. The number is in the header and the first button instead. Your call.
+  - **Portrait / Meet Your Driver photo, reviews, insurance, credentials, pricing inclusions, insurance/timing/mileage FAQ:** need real facts from Ed. Not invented; listed in the questions below.
+  - **Inter / Atkinson body font, warm-white page, 32-48px headings:** would replace the premium vibe you asked to keep. Body is already system sans at 18-19px; the big serif headings stay.
+  - **"Free quote" wording:** Ed hasn't said quotes are free; buttons say "Call Ed" and "rate".
 
 ## Assumptions I made
 - **Shamrock mark is drawn by me**, not traced from Ed's card (no card scan was available, and the brief says to ask before using it publicly). It's a simple three-leaf shamrock in a mid green. Swap in the real emblem once Ed or Ellie OKs the card photo.
@@ -37,7 +48,10 @@
 5. Is there a limit on what customers can pack (weight, nothing in the driver's view)?
 6. Which NJ and FL areas, and how much notice do you need?
 7. Can we use your shamrock from the card, and a photo of you (or your car) for the "One driver: me" section?
-8. Is youflyilldrive.com yours to register? It's currently unregistered and would make the perfect address for this site.
+8. Is youflyilldrive.com yours to register?
+9. A portrait of you (and one beside a car) for the hero and "Meet your driver"; years driving; why you do this work, in your words.
+10. Two or three customers who'd let us quote them by name.
+11. What's in the price: gas, tolls, lodging, your flight back? And what happens if something goes wrong on the road? It's currently unregistered and would make the perfect address for this site.
 
 ## Ideas not built (yours to pick)
 - **Runner-up world: airport departure board.** A split-flap board flipping "NEWARK → FORT MYERS"-style rows (with real towns once Ed names them), the "airline lounge" polish from the brief. Other worlds considered: an I-95 gold-thread route map, shamrock leaves drifting, hotel valet key tags, rain on a windshield with wipers.
