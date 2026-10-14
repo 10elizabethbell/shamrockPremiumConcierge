@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shamrock Transportation · You fly, I'll drive · New Jersey to Florida</title>
-<meta name="description" content="Edward Brannagan drives your car between New Jersey and Florida while you fly. Pack it full. Call 732-300-3835 for your route's rate.">
+<meta name="description" content="Edward Brannagan drives your car between New Jersey and Florida while you fly. Call 732-300-3835 for your route's rate.">
 <meta name="theme-color" content="#fbf8f1">
 <link rel="canonical" href="https://10elizabethbell.github.io/shamrockPremiumConcierge/">
 <meta property="og:type" content="website">
@@ -114,12 +114,6 @@ section{padding:64px 0 72px}
 .on-light .lede{color:var(--ink-soft)}
 .on-dark .lede{color:var(--cream-soft)}
 
-/* Pack it full */
-.pack .h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
-.pack-grid{display:grid;gap:36px}
-.pack-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule-light)}
-.pack-list li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule-light);font:500 clamp(28px,7.4vw,36px)/1.2 var(--serif);color:var(--ink)}
-.pack-list li span{font:500 15px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);white-space:nowrap}
 
 /* How it works (journey) */
 .journey{background:var(--g-800)}
@@ -211,7 +205,6 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   .honest{padding:40px 38px 36px}
 }
 @media (min-width:960px){
-  .pack-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:64px}
   .about-grid{grid-template-columns:1.1fr 1fr;align-items:start;gap:64px}
   .est-grid{grid-template-columns:1fr 1.05fr;align-items:start;gap:64px}
   .est-grid{align-items:center}
@@ -231,7 +224,7 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
 THESIS: Hotel stationery for a night drive: ivory paper, Irish green, muted gold, and road markings between sections. Calm, personal and still; the first screen is a route card (New Jersey to Florida, Ed's car on the line), and the night-drive spirit comes from his card ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and still dashed lane-line dividers like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
-STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: pack it full (the differentiator), how it works in three numbered steps, Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
+STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: how it works in three numbered steps, Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
 FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left, tap-to-call number top-right; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed and NJ-Florida; full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
 FORM: Single-scroll one-pager, phone-first, nothing animated. Hero (revised 2026-10-14) is light paper: headline, one sentence, one Call button, a text link, and a still route card (gold dotted line NJ to Florida with Ed's car on it; swap for Ed's photo when supplied). Night-drive world carried by the still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
@@ -283,26 +276,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </header>
 
 <main>
-<div class="lane" data-from="#fbf8f1" data-to="#f5efe2" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
-
-<section class="pack on-light" id="pack">
-  <div class="wrap pack-grid">
-    <div>
-      <h2 class="h2">Pack it <em>full.</em></h2>
-      <p class="lede">Trailer carriers want the car empty. I'm driving yours, so your season's things ride along inside it.</p>
-    </div>
-    <div>
-      <ul class="pack-list">
-        <li>Winter clothes <span>trunk</span></li>
-        <li>Golf clubs <span>back seat</span></li>
-        <li>The good pillows <span>front seat</span></li>
-        <li>Boxes you'd ship <span>anywhere</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="lane" data-from="#f5efe2" data-to="#174233" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
+<div class="lane" data-from="#fbf8f1" data-to="#174233" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
 
 <section class="journey on-dark" id="how">
   <div class="wrap">

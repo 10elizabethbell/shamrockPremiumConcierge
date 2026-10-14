@@ -36,5 +36,5 @@ Driveaway, not trailer shipping: one driver, the owner, drives your own car betw
 1. Never invent: rates, insurance, reviews, photos, towns, years. Unknowns are placeholders or omitted.
 2. Calling Ed is the primary action, reachable from every section.
 3. Big type and big tap targets for a 40-70 audience on phones; nothing hidden, dragged or hover-only.
-4. "Pack the car full" is the headline differentiator after the hero.
+4. Packing the car is a quiet differentiator (mentioned in How it works and the trailer-carrier note); the dedicated Pack it full section was cut by Ellie on 2026-10-14.
 5. Honest objection handling (when a trailer shipper is the better choice) builds trust.

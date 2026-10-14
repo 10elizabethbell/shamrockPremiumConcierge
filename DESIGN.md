@@ -136,7 +136,7 @@ components:
 
 The page is the stationery you'd find in the glovebox of a long night drive: ivory and paper sheets, thin gold rules, a serif that looks engraved, deep Irish green for the night. The first screen is a light paper sheet with a still route card on it, a gold dotted line from New Jersey down to Florida with Ed's car on the line. The night-drive spirit is carried by the green sections, the lane-line seams between them, and the motto from Ed's card in the footer, not by moving imagery.
 
-The page alternates paper and green grounds, joined by wavy lane-line seams: paper hero, ivory "Pack it full", green "How it works", ivory "Meet your driver", green rates and text form, deepest-green footer. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only three objects on the page are cards (the route card, the trailer-carrier note, the estimate form). Type is big for a 40-70 reader on a phone: body never under 17px, primary actions 60px tall.
+The page alternates paper and green grounds, joined by wavy lane-line seams: paper hero, green "How it works", ivory "Meet your driver", green rates and text form, deepest-green footer. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only three objects on the page are cards (the route card, the trailer-carrier note, the estimate form). Type is big for a 40-70 reader on a phone: body never under 17px, primary actions 60px tall.
 
 Nothing on the page moves. There is no canvas, no animation loop, no scroll effect; the only transitions are the hover/focus outline ring and a 1px button lift. The audience is 40-70; nothing should need to be learned, dragged or opened to be read.
 
@@ -153,14 +153,14 @@ A two-ground palette (green night, ivory/paper day) with one metallic accent tha
 
 ### Primary
 - **Muted Lounge Gold** (gold): trim on green. Step numbers and rings, the rates italic, the big phone number, footer motto and wordmark sub-label, lane-line dashes, text selection, the route car's lights.
-- **Antique Gold** (gold-deep): the same gold, darkened to read on ivory and paper. Hero italic line, Pack italic, the hero wordmark sub-label, top-bar phone icon, eyebrow text, the route card's dotted line, text-link underline, hover/focus ring on light grounds, input focus border, caret.
+- **Antique Gold** (gold-deep): the same gold, darkened to read on ivory and paper. Hero italic line, the hero wordmark sub-label, top-bar phone icon, eyebrow text, the route card's dotted line, text-link underline, hover/focus ring on light grounds, input focus border, caret.
 
 ### Secondary
 - **Shamrock Leaf** (leaf): the shamrock mark only (wordmark and favicon). Not a UI color.
 
 ### Neutral
 - **Paper** (paper): the hero ground and theme-color; the two cards that sit on ivory or green (trailer-carrier note, estimate form).
-- **Ivory** (ivory): paper sections (`on-light`: Pack, About) and the route card on the paper hero.
+- **Ivory** (ivory): paper sections (`on-light`: About) and the route card on the paper hero.
 - **Journey Green** (ground-journey): "How it works" ground; the green button fill; the route card's pins and car body.
 - **Night Green** (ground-night): estimate section ground and the page's base background.
 - **Deepest Green** (ground-deepest): footer ground.
@@ -185,14 +185,14 @@ The old night-highway colors are retired: taillight red is gone with the canvas,
 
 ### Hierarchy
 - **Display**: hero h1 only, ink. Second line italic 500 in gold-deep, on its own line. Steps to Display Wide (fixed 96px) from 1100px.
-- **Headline**: section h2. "Pack it full" uses the standard h2 size, below the hero h1; the about h2 drops to `clamp(40px, 10.5vw, 64px)`.
+- **Headline**: section h2, below the hero h1; the about h2 drops to `clamp(40px, 10.5vw, 64px)`.
 - **Title**: h3 in steps; the trailer-carrier note and form titles run slightly smaller (28-38px) by context.
-- **List item**: ruled serif rows (pack 500; about facts 600 at `clamp(24px, 6.4vw, 30px)` / 1.25).
+- **List item**: ruled serif rows (about facts 600 at `clamp(24px, 6.4vw, 30px)` / 1.25).
 - **Route label**: serif 600 at 25px inside the route card ("New Jersey", "Florida"); the wordmark "Shamrock" is set at the same size (28px in the footer, 22px under 370px).
 - **Phone number**: serif 600 `clamp(42px, 12vw, 72px)`, lining tabular figures, gold. The number is set as type, not as a button.
 - **Lede**: one sentence under an h2, max 34ch, soft color. The hero promise is a lede at 18-21px, max 32ch.
 - **Body**: 18px / 1.6 (19px from 760px). Measure 30-40ch.
-- **Label**: uppercase tracked sans, 12.5-15px, 0.12-0.2em. Only for the wordmark's "Transportation" and the right-hand tags in the pack list.
+- **Label**: uppercase tracked sans, 12.5-15px, 0.12-0.2em. Only for the wordmark's "Transportation".
 
 ### Named Rules
 **The One Italic Rule.** Each heading may turn one phrase italic 500, colored gold (green ground) or gold-deep (paper/ivory). That phrase carries the meaning ("I'll drive.", "full.", "rates."). Never italicize a whole paragraph.
@@ -209,10 +209,10 @@ Single-scroll, phone-first one-pager. Content sits in a centered wrap (max 1160p
 - **base (phone)**: everything stacks; the hero Call button is full-width (max 420px) with the text link beside or under it; the route card sits below the hero copy.
 - **max 370px**: narrower gutter, smaller button text and padding, smaller wordmark and phone link.
 - **760px**: gutter 40px, body 19px, top-bar nav links appear, the eyebrow gains " · New Jersey & Florida", the hero goes two-column (copy left, route card right, 64px gap), the Call button sizes to content, journey becomes a 2-column grid, footer 3 columns. Lane seams 44 to 60px tall.
-- **960px**: pack, about and estimate go two-column (64px gap).
+- **960px**: about and estimate go two-column (64px gap).
 - **1100px**: hero h1 fixed at 96px.
 
-**The Ruled List Rule.** Lists of facts (pack, about facts) are rows separated by 1px rules, top rule on the first item, no bullets, no boxes. Row padding 14-16px vertical.
+**The Ruled List Rule.** Lists of facts (about facts) are rows separated by 1px rules, top rule on the first item, no bullets, no boxes. Row padding 14-16px vertical.
 
 **No Hidden Content Rule.** Nothing is tucked behind an accordion, tab or tap. Every answer is visible as you scroll.
 
@@ -249,10 +249,10 @@ The quieter alternative to a button ("or text me instead"): 18px 600 sans in ink
 Ivory stationery card on the paper hero: double gold hairline, 6px radius, padding 18/16/14 (28/26/22 from 760px), no shadow. Holds an inline SVG (max 440px wide): a gold-deep dotted route (2.5px, dash 2/9, round caps) curving from a New Jersey pin down to a Florida pin, journey-green pins with paper centers, Ed's car (journey-green body, cream-soft windows, gold lights) sitting still on the line, labels in the route-label serif. It has `role="img"` and an aria-label. It is a placeholder slot: when Ed supplies a photo, the photo replaces the SVG inside the same card.
 
 ### Lane-line dividers (signature)
-A 44px (60px from 760px) SVG seam between every pair of grounds, including hero (paper) to Pack (ivory). The upper ground fills the background, the lower ground fills a gently waving path, and a gold dashed line (3px, dash 26/18, round caps) runs 11px inside the lower color like a road marking. The wave (amplitude 7px) and dashes are still; they are drawn once and redrawn only on resize. Set `data-from` / `data-to` to the two grounds' hexes. Every section boundary uses one; never a straight edge or an `<hr>`.
+A 44px (60px from 760px) SVG seam between every pair of grounds, including hero (paper) to How it works (green). The upper ground fills the background, the lower ground fills a gently waving path, and a gold dashed line (3px, dash 26/18, round caps) runs 11px inside the lower color like a road marking. The wave (amplitude 7px) and dashes are still; they are drawn once and redrawn only on resize. Set `data-from` / `data-to` to the two grounds' hexes. Every section boundary uses one; never a straight edge or an `<hr>`.
 
 ### Ruled lists
-Pack (serif rows, uppercase tag right-aligned), About facts (serif rows: routes and services from the card).
+About facts (serif rows: routes and services from the card).
 
 ### Trailer-carrier note (stationery)
 Paper on ivory, double gold hairline border, 6px radius, padding 30/24/28 (40/38/36 from 760px). Ink h3, a short bulleted list, one closing line. The real rates table, once Ed confirms, should use this same card style inside the rates section.
