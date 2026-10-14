@@ -1,0 +1,496 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-14T14:25:39+00:00",
+  "title": "Design System: Shamrock Transportation",
+  "extensions": {
+    "colorMeta": {
+      "ground-deepest": {
+        "role": "neutral",
+        "displayName": "Deepest Green",
+        "canonical": "#0d2b21",
+        "tonalRamp": [
+          "#020e09",
+          "#0d2b21",
+          "#2b493e",
+          "#4a695d",
+          "#6b8b7e",
+          "#8daea0",
+          "#b0d2c4",
+          "#e0f4eb"
+        ]
+      },
+      "ground-night": {
+        "role": "neutral",
+        "displayName": "Night Green",
+        "canonical": "#11352a",
+        "tonalRamp": [
+          "#010f09",
+          "#072c22",
+          "#274a3e",
+          "#466a5d",
+          "#678c7e",
+          "#89afa1",
+          "#acd3c5",
+          "#ddf5ec"
+        ]
+      },
+      "ground-journey": {
+        "role": "neutral",
+        "displayName": "Journey Green",
+        "canonical": "#174233",
+        "tonalRamp": [
+          "#000f08",
+          "#002d1f",
+          "#214b3c",
+          "#416b5b",
+          "#628d7c",
+          "#84b19e",
+          "#a8d5c2",
+          "#dbf6ea"
+        ]
+      },
+      "ground-glass": {
+        "role": "neutral",
+        "displayName": "Glass Green",
+        "canonical": "#24573f",
+        "tonalRamp": [
+          "#001006",
+          "#002f19",
+          "#194d36",
+          "#3b6d54",
+          "#5c8f75",
+          "#7fb397",
+          "#a2d8bb",
+          "#d8f8e5"
+        ]
+      },
+      "leaf": {
+        "role": "secondary",
+        "displayName": "Shamrock Leaf",
+        "canonical": "#46a96a",
+        "tonalRamp": [
+          "#001300",
+          "#003400",
+          "#00541a",
+          "#00763a",
+          "#33985b",
+          "#5bbd7c",
+          "#80e2a0",
+          "#c7ffd6"
+        ]
+      },
+      "ivory": {
+        "role": "neutral",
+        "displayName": "Ivory",
+        "canonical": "#f5efe2",
+        "tonalRamp": [
+          "#0d0b06",
+          "#29251b",
+          "#464137",
+          "#666156",
+          "#878276",
+          "#aaa498",
+          "#cec9bc",
+          "#f2eee6"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#fbf8f1",
+        "tonalRamp": [
+          "#0c0b08",
+          "#272520",
+          "#44423c",
+          "#63615b",
+          "#85827c",
+          "#a8a59e",
+          "#ccc9c2",
+          "#f0eeea"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#173a2d",
+        "tonalRamp": [
+          "#010f09",
+          "#082c20",
+          "#274a3c",
+          "#476a5b",
+          "#678c7c",
+          "#89af9f",
+          "#add4c2",
+          "#def5ea"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Ink Soft",
+        "canonical": "#4a5f55",
+        "tonalRamp": [
+          "#050e09",
+          "#162a21",
+          "#33473e",
+          "#52675d",
+          "#72887e",
+          "#94aba0",
+          "#b8d0c4",
+          "#e4f3eb"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#efe7d4",
+        "tonalRamp": [
+          "#0e0b04",
+          "#2a2416",
+          "#484132",
+          "#686150",
+          "#898271",
+          "#aca493",
+          "#d0c9b6",
+          "#f3eee3"
+        ]
+      },
+      "cream-soft": {
+        "role": "neutral",
+        "displayName": "Cream Soft",
+        "canonical": "#d3dcbd",
+        "tonalRamp": [
+          "#0a0d03",
+          "#22280f",
+          "#3f462c",
+          "#5e654a",
+          "#7e876a",
+          "#a1a98c",
+          "#c5ceaf",
+          "#ecf1df"
+        ]
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Muted Lounge Gold",
+        "canonical": "#c9a96a",
+        "tonalRamp": [
+          "#160800",
+          "#391e00",
+          "#583c00",
+          "#795c1a",
+          "#9c7d3f",
+          "#c0a061",
+          "#e5c585",
+          "#ffecc6"
+        ]
+      },
+      "gold-deep": {
+        "role": "primary",
+        "displayName": "Antique Gold",
+        "canonical": "#8a6728",
+        "tonalRamp": [
+          "#170700",
+          "#3c1d00",
+          "#5b3b00",
+          "#7d5a19",
+          "#a07c3e",
+          "#c49f61",
+          "#e9c384",
+          "#ffebc6"
+        ]
+      },
+      "taillight": {
+        "role": "tertiary",
+        "displayName": "Taillight Red",
+        "canonical": "#d9573f",
+        "tonalRamp": [
+          "#290000",
+          "#5f0000",
+          "#850000",
+          "#ac2c14",
+          "#d4523a",
+          "#fc775d",
+          "#ff9c80",
+          "#ffd6c4"
+        ]
+      },
+      "error": {
+        "role": "error",
+        "displayName": "Error Brick",
+        "canonical": "#a3342a",
+        "tonalRamp": [
+          "#260000",
+          "#590000",
+          "#7e0907",
+          "#a5362b",
+          "#cc594c",
+          "#f47d6e",
+          "#ffa291",
+          "#ffd9cd"
+        ]
+      },
+      "rule-dark": {
+        "role": "neutral",
+        "displayName": "Rule Dark",
+        "canonical": "rgba(201,169,106,.35)"
+      },
+      "rule-light": {
+        "role": "neutral",
+        "displayName": "Rule Light",
+        "canonical": "rgba(138,103,40,.32)"
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero h1 only; second line italic 500 gold. Fixed 128px from 1100px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section h2. Pack it full runs larger (clamp(56px,15vw,104px)); rates card smaller (clamp(40px,10.5vw,60px))."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "h3 in steps, trust, estimate form (30-46px by context)."
+      },
+      "list-item": {
+        "displayName": "List item",
+        "purpose": "Serif rows in ruled lists (pack 500, where 600, FAQ summary 24-30px)."
+      },
+      "lede": {
+        "displayName": "Lede",
+        "purpose": "One sentence under an h2, max 34ch, soft color."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading copy; 19px from 760px. Never under 17px."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Pill button labels."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked sans: wordmark sub-label (12.5px .2em), top-bar route (15px .18em), pack-list tags (15px .12em). Never sentences."
+      }
+    },
+    "shadows": [
+      {
+        "name": "shadow-soft",
+        "value": "0 14px 28px -16px rgba(0,0,0,.28), 0 3px 8px -4px rgba(0,0,0,.12)",
+        "purpose": "Green button."
+      },
+      {
+        "name": "gold-lift",
+        "value": "0 14px 30px -14px rgba(6,26,19,.55)",
+        "purpose": "Gold button on green."
+      },
+      {
+        "name": "form-float",
+        "value": "0 30px 60px -30px rgba(6,26,19,.6)",
+        "purpose": "Estimate form card on green."
+      },
+      {
+        "name": "car-drop",
+        "value": "drop-shadow(0 6px 8px rgba(0,0,0,.35))",
+        "purpose": "Step car on the route rail only."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-out",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Lifts, FAQ open (.45s), icon turns and transforms (.5s), hint fade (1.2s)."
+      },
+      {
+        "name": "state-change",
+        "value": "0.2s-0.3s",
+        "purpose": "Outline-ring and color transitions."
+      },
+      {
+        "name": "lane-divider",
+        "value": "AMP 7px, dash 8px/s, INSET 11px",
+        "purpose": "Shared rAF loop for all seams, IntersectionObserver-paused."
+      },
+      {
+        "name": "hero-canvas",
+        "value": "LANES 6/8, STREAKS_PER_LANE 6/11, SPEED 140-300px/s, STREAK 50-150px, SWELL 16/26, RIPPLE 4, PUSH 30/40, SPRING 38, DAMP 7.5, IDLE_MS 2600, LANE_TOP .10/.50, LANE_BOT .62/.97, TILT 0/.36 (phone/desktop)",
+        "purpose": "Hero highway CFG; tune here, not in draw code."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "still frame",
+        "purpose": "Canvas draws one frame, seams render t=0, CSS transitions 0.01ms, smooth scroll off."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "narrow",
+        "value": "max-width 370px"
+      },
+      {
+        "name": "tablet",
+        "value": "760px"
+      },
+      {
+        "name": "desktop",
+        "value": "960px"
+      },
+      {
+        "name": "wide",
+        "value": "1100px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Primary Call Ed action on a green ground.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-gold\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"/></svg>Call Ed <span class=\"num\">732-300-3835</span></a></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-dark{background:var(--g-900);color:var(--cream);padding:24px;display:flex;gap:12px;flex-wrap:wrap}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:60px;padding:0 26px;border-radius:999px;font:600 19px/1.1 var(--sans);letter-spacing:.01em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;outline:2px solid transparent;outline-offset:3px;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),background-color .3s,outline-color .2s}.ds-btn:hover,.ds-btn:focus-visible{transform:translateY(-1px)}.ds-btn:active{transform:translateY(1px)}.ds-btn .num{font-variant-numeric:tabular-nums;font-weight:500;opacity:.85}.ds-btn-gold{background:var(--gold);color:var(--g-950);box-shadow:0 14px 30px -14px rgba(6,26,19,.55)}.ds-btn-gold:hover,.ds-btn-gold:focus-visible{outline-color:var(--cream)}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary action on green: cream outline pill.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn ds-btn-ghost\" href=\"#\">Get your rate</a></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-dark{background:var(--g-900);color:var(--cream);padding:24px;display:flex;gap:12px;flex-wrap:wrap}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:60px;padding:0 26px;border-radius:999px;font:600 19px/1.1 var(--sans);letter-spacing:.01em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;outline:2px solid transparent;outline-offset:3px;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),background-color .3s,outline-color .2s}.ds-btn:hover,.ds-btn:focus-visible{transform:translateY(-1px)}.ds-btn:active{transform:translateY(1px)}.ds-btn .num{font-variant-numeric:tabular-nums;font-weight:500;opacity:.85}.ds-btn-ghost{background:transparent;color:var(--cream);border-color:rgba(239,231,212,.55)}.ds-btn-ghost:hover,.ds-btn-ghost:focus-visible{outline-color:var(--cream)}"
+    },
+    {
+      "name": "Green Button",
+      "kind": "button",
+      "refersTo": "button-green",
+      "description": "Action on ivory or paper (rates card, form submit); gold-deep ring.",
+      "html": "<div class=\"ds-light\"><a class=\"ds-btn ds-btn-green\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"/></svg>Call for your rate</a></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:60px;padding:0 26px;border-radius:999px;font:600 19px/1.1 var(--sans);letter-spacing:.01em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;outline:2px solid transparent;outline-offset:3px;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),background-color .3s,outline-color .2s}.ds-btn:hover,.ds-btn:focus-visible{transform:translateY(-1px)}.ds-btn:active{transform:translateY(1px)}.ds-btn .num{font-variant-numeric:tabular-nums;font-weight:500;opacity:.85}.ds-btn-green{background:var(--g-800);color:var(--cream);box-shadow:var(--shadow-soft)}.ds-btn-green:hover,.ds-btn-green:focus-visible{outline-color:var(--gold-deep)}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Estimate form field on paper; gold-deep hover/focus ring.",
+      "html": "<div class=\"ds-form\"><label class=\"ds-label\" for=\"ds-f\">Car is in</label><input class=\"ds-input\" id=\"ds-f\" placeholder=\"Town, state\"><label class=\"ds-label\" for=\"ds-g\">Car <i>(optional)</i></label><input class=\"ds-input\" id=\"ds-g\" placeholder=\"Year, make, model\"></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-form{background:var(--paper);padding:28px 22px;border-radius:22px;box-shadow:0 30px 60px -30px rgba(6,26,19,.6);max-width:420px}.ds-label{display:block;margin-top:14px;font:600 18px/1.3 var(--sans);color:var(--ink)}.ds-label i{font-style:normal;font-weight:400;color:var(--ink-soft)}.ds-input{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:14px 16px;min-height:56px;font:400 18px/1.4 var(--sans);color:var(--ink);background:#fff;border:1.5px solid rgba(23,58,45,.28);border-radius:12px;outline:2px solid transparent;outline-offset:1px;caret-color:var(--gold-deep);transition:border-color .2s,outline-color .2s}.ds-input::placeholder{color:#6b7a72}.ds-input:hover,.ds-input:focus{outline-color:var(--gold-deep);border-color:var(--gold-deep)}"
+    },
+    {
+      "name": "Rates Stationery Card",
+      "kind": "card",
+      "refersTo": "rates-card",
+      "description": "The double-hairline paper card for rates; one of only two cards on the site.",
+      "html": "<div class=\"ds-light\"><div class=\"ds-rates\"><h2><em>Very reasonable rates.</em></h2><p>Every route gets its own flat rate. Call and I'll give you the price on the phone.</p></div></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-rates{padding:38px 28px 32px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;max-width:460px}.ds-rates h2{margin:0;font:600 clamp(40px,10.5vw,60px)/1.02 var(--serif);letter-spacing:-.01em}.ds-rates em{font-style:italic;font-weight:500;color:var(--gold-deep)}.ds-rates p{margin:14px 0 0;font:400 18px/1.6 var(--sans);color:var(--ink-soft)}"
+    },
+    {
+      "name": "Ruled List",
+      "kind": "custom",
+      "description": "Facts as serif rows between 1px rules; never cards.",
+      "html": "<div class=\"ds-light\"><ul class=\"ds-ruled\"><li>Winter clothes <span>trunk</span></li><li>Golf clubs <span>back seat</span></li><li>The good pillows <span>front seat</span></li></ul></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-ruled{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule-light);max-width:520px}.ds-ruled li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule-light);font:500 clamp(28px,7.4vw,36px)/1.2 var(--serif);color:var(--ink)}.ds-ruled li span{font:500 15px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}"
+    },
+    {
+      "name": "FAQ Row",
+      "kind": "custom",
+      "description": "Ruled details row; serif summary, plus icon turns 45deg, gold-deep hover ring.",
+      "html": "<div class=\"ds-light\"><details class=\"ds-faq\"><summary>Can I really pack the car?<svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg></summary><p>Yes. Load the trunk and back seat, and leave me room to drive.</p></details></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-faq{border-top:1px solid var(--rule-light);border-bottom:1px solid var(--rule-light);max-width:620px}.ds-faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 0;cursor:pointer;font:600 clamp(24px,6.2vw,30px)/1.22 var(--serif);color:var(--ink);border-radius:6px;outline:2px solid transparent;outline-offset:6px;transition:outline-color .2s}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover,.ds-faq summary:focus-visible{outline-color:var(--gold-deep)}.ds-faq summary svg{flex:none;color:var(--ink-soft);transition:transform .5s var(--ease-out),color .2s}.ds-faq summary:hover svg{color:var(--gold-deep)}.ds-faq[open] summary svg{transform:rotate(45deg)}.ds-faq p{margin:0;padding:0 0 24px;font:400 18px/1.6 var(--sans);color:var(--ink-soft)}"
+    },
+    {
+      "name": "Lane-line Divider",
+      "kind": "custom",
+      "description": "Wavy seam between grounds with a gold dashed road marking 11px inside the lower color (static snapshot; live version is animated).",
+      "html": "<svg class=\"ds-lane\" viewBox=\"0 0 600 60\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><rect width=\"600\" height=\"60\" fill=\"#f5efe2\"/><path d=\"M0 24 C150 14 300 34 450 22 S600 20 600 24 L600 62 L0 62Z\" fill=\"#174233\"/><path class=\"ln\" d=\"M0 35 C150 25 300 45 450 33 S600 31 600 35\"/></svg>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-lane{display:block;width:100%;height:60px}.ds-lane .ln{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:26 18;stroke-linecap:round}"
+    },
+    {
+      "name": "Wordmark",
+      "kind": "nav",
+      "description": "Top bar: shamrock mark, cream serif name, gold tracked sub-label; route label from 760px.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-brand\" href=\"#\"><svg viewBox=\"-21 -21 42 44\" width=\"38\" height=\"42\" aria-hidden=\"true\"><g fill=\"#46a96a\"><path id=\"dsl\" d=\"M0 0C-3-3-10-6-10-12.5-10-17-5-19-2.2-16-1-14.8-.3-13.6 0-12.6.3-13.6 1-14.8 2.2-16 5-19 10-17 10-12.5 10-6 3-3 0 0Z\"/><use href=\"#dsl\" transform=\"rotate(120)\"/><use href=\"#dsl\" transform=\"rotate(-120)\"/></g><path d=\"M0-1C2 6 4 12 8 19\" stroke=\"#46a96a\" stroke-width=\"2.6\" fill=\"none\" stroke-linecap=\"round\"/></svg><span><b>Shamrock</b><small>Transportation</small></span></a></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-dark{background:var(--g-900);color:var(--cream);padding:24px;display:flex;gap:12px;flex-wrap:wrap}.ds-brand{display:flex;align-items:center;gap:12px;text-decoration:none;border-radius:6px;outline:2px solid transparent;outline-offset:3px}.ds-brand:focus-visible{outline-color:var(--cream)}.ds-brand b{display:block;font:600 25px/1 var(--serif);letter-spacing:.01em;color:var(--cream)}.ds-brand small{display:block;margin-top:4px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night Drive, Long Exposure",
+    "overview": "A night highway seen from above, photographed on a long exposure: gold headlight trails one way, red taillights the other, and Ed's car in the middle. Everything else on the page is the hotel stationery you'd find in the glovebox of that drive: ivory paper, thin gold rules, a serif that looks engraved. The pace is calm and unhurried; nothing pops, things drift.\n\nThe page alternates two grounds, deep green night and ivory paper, joined by wavy lane-line seams. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only two objects on the whole page are cards (the rates stationery and the estimate form). Type is big for a 60+ reader on a phone: body never under 17px, primary actions 60px tall.\n\nMotion belongs to the road. The hero canvas, the lane seams and the step car are the only moving things, and every one of them stops for reduced motion and when off screen.",
+    "keyCharacteristics": [
+      "Deep Irish green ground, never black; ivory and paper for reading sections.",
+      "Cormorant display with one gold italic turn of phrase per heading; system sans for everything read or tapped.",
+      "Thin gold rules and dashed gold lane markings as the only ornament.",
+      "Pill buttons, gold on green, green on ivory; hover and focus share one outline ring.",
+      "Taillight red lives only inside the motion (canvas, still-frame trails)."
+    ],
+    "rules": [
+      {
+        "name": "The Never-Black Rule",
+        "body": "The darkest value on the page is ground-deepest. No `#000`, no neutral greys; shadows are tinted from the ground green. The canvas car and the step car's drop shadow use black at 35-45% alpha; that is illustration paint, not a precedent for UI shadows.",
+        "section": "colors"
+      },
+      {
+        "name": "The Ground-Matched Gold Rule",
+        "body": "On green, use gold; on ivory or paper, use gold-deep. Same for rules (rule-dark vs rule-light) and text (cream vs ink). Every element picks its pair from the ground it sits on, never across.",
+        "section": "colors"
+      },
+      {
+        "name": "The Red-Stays-On-The-Road Rule",
+        "body": "Taillight red appears only inside moving imagery. It is not an accent color.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Italic Rule",
+        "body": "Each heading may turn one phrase italic 500, colored gold (green ground) or gold-deep (ivory). That phrase carries the meaning (\"I'll drive.\", \"full.\", \"Very reasonable rates.\"). Never italicize a whole paragraph.",
+        "section": "typography"
+      },
+      {
+        "name": "The 17px Floor",
+        "body": "Nothing the customer reads drops below 17px (16px only for the copyright line). Labels are the one smaller register, and they are never sentences.",
+        "section": "typography"
+      },
+      {
+        "name": "Tight Serif, Loose Sans",
+        "body": "Serif headings sit at 0.92-1.22 line height; sans copy at 1.5-1.6. The tight leading on display is intentional.",
+        "section": "typography"
+      },
+      {
+        "name": "The Ruled List Rule",
+        "body": "Lists of facts (pack, where, trust, FAQ) are rows separated by 1px rules, top rule on the first item, no bullets, no boxes. Row padding 16-24px vertical. On desktop the trust list turns into three columns each topped by one rule.",
+        "section": "layout"
+      },
+      {
+        "name": "The Sticky Headline Rule",
+        "body": "In two-column sections where the right column is long (journey, FAQ), the h2 sticks at 96px from the top.",
+        "section": "layout"
+      },
+      {
+        "name": "The Lit-From-Above Rule",
+        "body": "Every shadow falls straight down with a negative spread, so it reads as ambient light under an object, never a hard offset or a glow halo.",
+        "section": "elevation"
+      },
+      {
+        "name": "The One Ring Rule",
+        "body": "Hover and keyboard focus look the same: a 2px outline at 3px offset. Sections set `--ring` (`on-dark`: cream; `on-light` and the form: gold-deep) and every interactive thing (buttons, big number, FAQ summaries, footer and form links, inputs) uses it. Don't introduce color-fill hovers.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** pick color, rule and ring from the ground an element sits on (`on-dark` / `on-light` classes set `--ring`).",
+      "**Do** join every new section to its neighbors with a lane-line divider carrying both grounds' hexes.",
+      "**Do** keep the primary action a `tel:+17323003835` link, gold on green or green on ivory, 60px tall.",
+      "**Do** set facts as ruled lists in serif rows before reaching for cards.",
+      "**Do** keep body copy at 18px+ and measures at 30-40ch.",
+      "**Do** pause any new animation off screen and give it a reduced-motion still frame.",
+      "**Do** put new rates in the stationery card style (paper, double hairline, 6px)."
+    ],
+    "donts": [
+      "**Don't** use black or neutral grey anywhere, including shadows.",
+      "**Don't** use taillight red outside moving imagery.",
+      "**Don't** use gold (light) text on ivory or gold-deep on green; it fails contrast on the wrong ground.",
+      "**Don't** wrap sections or list rows in cards; the rates card and the estimate form are the only cards.",
+      "**Don't** add hover fills or color-swap hovers; hover is the outline ring.",
+      "**Don't** let hero copy and light trails overlap; extend the clear-zone instead.",
+      "**Don't** start a second rAF loop for something that can join an existing one."
+    ]
+  }
+}
