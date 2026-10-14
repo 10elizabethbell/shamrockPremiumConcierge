@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "generatedAt": "2026-10-14T14:25:39+00:00",
+  "generatedAt": "2026-10-14T22:03:12+00:00",
   "title": "Design System: Shamrock Transportation",
   "extensions": {
     "colorMeta": {
@@ -247,15 +247,15 @@
       },
       "headline": {
         "displayName": "Headline",
-        "purpose": "Section h2. Pack it full runs larger (clamp(56px,15vw,104px)); rates card smaller (clamp(40px,10.5vw,60px))."
+        "purpose": "Section h2. Pack it full runs larger (clamp(56px,15vw,104px)); the about h2 drops to clamp(40px,10.5vw,64px)."
       },
       "title": {
         "displayName": "Title",
-        "purpose": "h3 in steps, trust, estimate form (30-46px by context)."
+        "purpose": "h3 in steps, the trailer-carrier note, estimate form (28-42px by context)."
       },
       "list-item": {
         "displayName": "List item",
-        "purpose": "Serif rows in ruled lists (pack 500, where 600, FAQ summary 24-30px)."
+        "purpose": "Serif rows in ruled lists (pack 500; about facts 600 at clamp(24px,6.4vw,30px)/1.25)."
       },
       "lede": {
         "displayName": "Lede",
@@ -289,18 +289,13 @@
         "name": "form-float",
         "value": "0 30px 60px -30px rgba(6,26,19,.6)",
         "purpose": "Estimate form card on green."
-      },
-      {
-        "name": "car-drop",
-        "value": "drop-shadow(0 6px 8px rgba(0,0,0,.35))",
-        "purpose": "Step car on the route rail only."
       }
     ],
     "motion": [
       {
         "name": "ease-out",
         "value": "cubic-bezier(.16,1,.3,1)",
-        "purpose": "Lifts, FAQ open (.45s), icon turns and transforms (.5s), hint fade (1.2s)."
+        "purpose": "Button lifts and transforms (.5s)."
       },
       {
         "name": "state-change",
@@ -309,18 +304,18 @@
       },
       {
         "name": "lane-divider",
-        "value": "AMP 7px, dash 8px/s, INSET 11px",
-        "purpose": "Shared rAF loop for all seams, IntersectionObserver-paused."
+        "value": "AMP 7px, dash 26/18, INSET 11px, static",
+        "purpose": "Seams are drawn once and redrawn only on resize; no animation."
       },
       {
         "name": "hero-canvas",
-        "value": "LANES 6/8, STREAKS_PER_LANE 6/11, SPEED 140-300px/s, STREAK 50-150px, SWELL 16/26, RIPPLE 4, PUSH 30/40, SPRING 38, DAMP 7.5, IDLE_MS 2600, LANE_TOP .10/.50, LANE_BOT .62/.97, TILT 0/.36 (phone/desktop)",
-        "purpose": "Hero highway CFG; tune here, not in draw code."
+        "value": "LANES 6/8, STREAKS_PER_LANE 3/5, SPEED 45-85px/s, STREAK 70-170px, SWELL_AMP 12/20 (fixed), CAR_SPEED 38/50, LANE_TOP .10/.50, LANE_BOT .62/.97, TILT 0/.36 (phone/desktop)",
+        "purpose": "Hero highway CFG; ambient only (pointer-events:none, no drag). Tune here, not in draw code. The page's only rAF loop, IntersectionObserver-paused."
       },
       {
         "name": "reduced-motion",
         "value": "still frame",
-        "purpose": "Canvas draws one frame, seams render t=0, CSS transitions 0.01ms, smooth scroll off."
+        "purpose": "Canvas draws one frame (car at 45% across), CSS transitions 0.01ms, smooth scroll off."
       }
     ],
     "breakpoints": [
@@ -363,7 +358,7 @@
       "name": "Green Button",
       "kind": "button",
       "refersTo": "button-green",
-      "description": "Action on ivory or paper (rates card, form submit); gold-deep ring.",
+      "description": "Action on ivory or paper (form submit); gold-deep ring.",
       "html": "<div class=\"ds-light\"><a class=\"ds-btn ds-btn-green\" href=\"#\"><svg viewBox=\"0 0 24 24\" width=\"21\" height=\"21\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z\"/></svg>Call for your rate</a></div>",
       "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.6em;min-height:60px;padding:0 26px;border-radius:999px;font:600 19px/1.1 var(--sans);letter-spacing:.01em;text-decoration:none;border:1.5px solid transparent;cursor:pointer;outline:2px solid transparent;outline-offset:3px;transition:transform .5s var(--ease-out),box-shadow .5s var(--ease-out),background-color .3s,outline-color .2s}.ds-btn:hover,.ds-btn:focus-visible{transform:translateY(-1px)}.ds-btn:active{transform:translateY(1px)}.ds-btn .num{font-variant-numeric:tabular-nums;font-weight:500;opacity:.85}.ds-btn-green{background:var(--g-800);color:var(--cream);box-shadow:var(--shadow-soft)}.ds-btn-green:hover,.ds-btn-green:focus-visible{outline-color:var(--gold-deep)}"
     },
@@ -376,31 +371,31 @@
       "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-form{background:var(--paper);padding:28px 22px;border-radius:22px;box-shadow:0 30px 60px -30px rgba(6,26,19,.6);max-width:420px}.ds-label{display:block;margin-top:14px;font:600 18px/1.3 var(--sans);color:var(--ink)}.ds-label i{font-style:normal;font-weight:400;color:var(--ink-soft)}.ds-input{display:block;width:100%;box-sizing:border-box;margin-top:7px;padding:14px 16px;min-height:56px;font:400 18px/1.4 var(--sans);color:var(--ink);background:#fff;border:1.5px solid rgba(23,58,45,.28);border-radius:12px;outline:2px solid transparent;outline-offset:1px;caret-color:var(--gold-deep);transition:border-color .2s,outline-color .2s}.ds-input::placeholder{color:#6b7a72}.ds-input:hover,.ds-input:focus{outline-color:var(--gold-deep);border-color:var(--gold-deep)}"
     },
     {
-      "name": "Rates Stationery Card",
+      "name": "Trailer-carrier Note",
       "kind": "card",
-      "refersTo": "rates-card",
-      "description": "The double-hairline paper card for rates; one of only two cards on the site.",
-      "html": "<div class=\"ds-light\"><div class=\"ds-rates\"><h2><em>Very reasonable rates.</em></h2><p>Every route gets its own flat rate. Call and I'll give you the price on the phone.</p></div></div>",
-      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-rates{padding:38px 28px 32px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;max-width:460px}.ds-rates h2{margin:0;font:600 clamp(40px,10.5vw,60px)/1.02 var(--serif);letter-spacing:-.01em}.ds-rates em{font-style:italic;font-weight:500;color:var(--gold-deep)}.ds-rates p{margin:14px 0 0;font:400 18px/1.6 var(--sans);color:var(--ink-soft)}"
+      "refersTo": "honest-card",
+      "description": "Paper stationery card on ivory with a double gold hairline (1px border plus 1px outline inset 9px), 6px radius. One of only two cards on the site; future rates use this style.",
+      "html": "<div class=\"ds-light\"><div class=\"ds-honest\"><h3>When a trailer carrier is the better choice</h3><ul><li>The lowest price matters more than when the car arrives.</li><li>The car doesn't run.</li><li>It's a collector car you'd rather not put miles on.</li></ul><p>For everyone else, having your car driven down, packed, by one person is the easier way.</p></div></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-honest{padding:30px 24px 28px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;color:var(--ink-soft);font:400 18px/1.6 var(--sans);max-width:460px}.ds-honest h3{margin:0;font:600 clamp(28px,7.4vw,36px)/1.02 var(--serif);letter-spacing:-.01em;color:var(--ink)}.ds-honest ul{margin:14px 0 0;padding-left:1.1em}.ds-honest li{margin-top:8px}.ds-honest p{margin:16px 0 0}"
     },
     {
       "name": "Ruled List",
       "kind": "custom",
-      "description": "Facts as serif rows between 1px rules; never cards.",
+      "description": "Facts as serif rows between 1px rules (pack, about facts); never cards, no bullets.",
       "html": "<div class=\"ds-light\"><ul class=\"ds-ruled\"><li>Winter clothes <span>trunk</span></li><li>Golf clubs <span>back seat</span></li><li>The good pillows <span>front seat</span></li></ul></div>",
       "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-ruled{list-style:none;padding:0;margin:0;border-top:1px solid var(--rule-light);max-width:520px}.ds-ruled li{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0;border-bottom:1px solid var(--rule-light);font:500 clamp(28px,7.4vw,36px)/1.2 var(--serif);color:var(--ink)}.ds-ruled li span{font:500 15px/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}"
     },
     {
-      "name": "FAQ Row",
+      "name": "Numbered Steps",
       "kind": "custom",
-      "description": "Ruled details row; serif summary, plus icon turns 45deg, gold-deep hover ring.",
-      "html": "<div class=\"ds-light\"><details class=\"ds-faq\"><summary>Can I really pack the car?<svg viewBox=\"0 0 24 24\" width=\"26\" height=\"26\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/></svg></summary><p>Yes. Load the trunk and back seat, and leave me room to drive.</p></details></div>",
-      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-light{background:var(--ivory);color:var(--ink);padding:24px}.ds-faq{border-top:1px solid var(--rule-light);border-bottom:1px solid var(--rule-light);max-width:620px}.ds-faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 0;cursor:pointer;font:600 clamp(24px,6.2vw,30px)/1.22 var(--serif);color:var(--ink);border-radius:6px;outline:2px solid transparent;outline-offset:6px;transition:outline-color .2s}.ds-faq summary::-webkit-details-marker{display:none}.ds-faq summary:hover,.ds-faq summary:focus-visible{outline-color:var(--gold-deep)}.ds-faq summary svg{flex:none;color:var(--ink-soft);transition:transform .5s var(--ease-out),color .2s}.ds-faq summary:hover svg{color:var(--gold-deep)}.ds-faq[open] summary svg{transform:rotate(45deg)}.ds-faq p{margin:0;padding:0 0 24px;font:400 18px/1.6 var(--sans);color:var(--ink-soft)}"
+      "description": "How it works: three static steps, each number in a 44px gold-ringed circle (serif lining figures), serif h3, one cream-soft sentence. No rail, no moving parts.",
+      "html": "<div class=\"ds-dark\"><ol class=\"ds-steps\"><li><h3>Call me</h3><p>Tell me where the car is, where it's going, and the day you fly.</p></li><li><h3>Fly</h3><p>Hand me the keys and catch your flight. I drive the car myself.</p></li><li><h3>Your car is waiting</h3><p>It's there when you land, packed the way you left it.</p></li></ol></div>",
+      "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-dark{background:var(--g-800);color:var(--cream);padding:24px}.ds-steps{list-style:none;counter-reset:step;margin:0;padding:0;max-width:640px}.ds-steps li{counter-increment:step;position:relative;padding:0 0 32px 64px}.ds-steps li:last-child{padding-bottom:0}.ds-steps li::before{content:counter(step);position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:600 24px/1 var(--serif);font-variant-numeric:lining-nums;color:var(--gold)}.ds-steps h3{margin:0;font:600 clamp(32px,8.2vw,42px)/1.02 var(--serif);letter-spacing:-.01em;color:var(--cream)}.ds-steps p{margin:6px 0 0;font:400 18px/1.6 var(--sans);color:var(--cream-soft);max-width:36ch}"
     },
     {
       "name": "Lane-line Divider",
       "kind": "custom",
-      "description": "Wavy seam between grounds with a gold dashed road marking 11px inside the lower color (static snapshot; live version is animated).",
+      "description": "Static wavy seam between grounds with a gold dashed road marking 11px inside the lower color; drawn once, redrawn on resize.",
       "html": "<svg class=\"ds-lane\" viewBox=\"0 0 600 60\" preserveAspectRatio=\"none\" aria-hidden=\"true\"><rect width=\"600\" height=\"60\" fill=\"#f5efe2\"/><path d=\"M0 24 C150 14 300 34 450 22 S600 20 600 24 L600 62 L0 62Z\" fill=\"#174233\"/><path class=\"ln\" d=\"M0 35 C150 25 300 45 450 33 S600 31 600 35\"/></svg>",
       "css": ":host{--g-950:#0d2b21;--g-900:#11352a;--g-800:#174233;--ivory:#f5efe2;--paper:#fbf8f1;--ink:#173a2d;--ink-soft:#4a5f55;--cream:#efe7d4;--cream-soft:#d3dcbd;--gold:#c9a96a;--gold-deep:#8a6728;--rule-dark:rgba(201,169,106,.35);--rule-light:rgba(138,103,40,.32);--serif:'Cormorant','Iowan Old Style','Palatino Linotype',Palatino,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,'Helvetica Neue',Arial,sans-serif;--ease-out:cubic-bezier(.16,1,.3,1);--shadow-soft:0 14px 28px -16px rgba(0,0,0,.28),0 3px 8px -4px rgba(0,0,0,.12)}.ds-lane{display:block;width:100%;height:60px}.ds-lane .ln{fill:none;stroke:var(--gold);stroke-width:3;stroke-dasharray:26 18;stroke-linecap:round}"
     },
@@ -414,7 +409,7 @@
   ],
   "narrative": {
     "northStar": "The Night Drive, Long Exposure",
-    "overview": "A night highway seen from above, photographed on a long exposure: gold headlight trails one way, red taillights the other, and Ed's car in the middle. Everything else on the page is the hotel stationery you'd find in the glovebox of that drive: ivory paper, thin gold rules, a serif that looks engraved. The pace is calm and unhurried; nothing pops, things drift.\n\nThe page alternates two grounds, deep green night and ivory paper, joined by wavy lane-line seams. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only two objects on the whole page are cards (the rates stationery and the estimate form). Type is big for a 60+ reader on a phone: body never under 17px, primary actions 60px tall.\n\nMotion belongs to the road. The hero canvas, the lane seams and the step car are the only moving things, and every one of them stops for reduced motion and when off screen.",
+    "overview": "A night highway seen from above, photographed on a long exposure: gold headlight trails one way, red taillights the other, and Ed's car in the middle. Everything else on the page is the hotel stationery you'd find in the glovebox of that drive: ivory paper, thin gold rules, a serif that looks engraved. The pace is calm and unhurried; nothing pops, and only the hero road moves.\n\nThe page alternates two grounds, deep green night and ivory paper, joined by wavy lane-line seams. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only two objects on the whole page are cards (the \"trailer carrier\" stationery note and the estimate form). Type is big for a 40-70 reader on a phone: body never under 17px, primary actions 60px tall.\n\nMotion belongs to the road, and only the road. The hero canvas is the one moving thing on the page: slow, ambient, not interactive. Everything below it is still. The audience is 40-70; nothing should need to be learned, dragged or opened to be read.",
     "keyCharacteristics": [
       "Deep Irish green ground, never black; ivory and paper for reading sections.",
       "Cormorant display with one gold italic turn of phrase per heading; system sans for everything read or tapped.",
@@ -425,7 +420,7 @@
     "rules": [
       {
         "name": "The Never-Black Rule",
-        "body": "The darkest value on the page is ground-deepest. No `#000`, no neutral greys; shadows are tinted from the ground green. The canvas car and the step car's drop shadow use black at 35-45% alpha; that is illustration paint, not a precedent for UI shadows.",
+        "body": "The darkest value on the page is ground-deepest. No `#000`, no neutral greys; shadows are tinted from the ground green. The canvas car's shadow uses black at 45% alpha; that is illustration paint, not a precedent for UI shadows.",
         "section": "colors"
       },
       {
@@ -440,7 +435,7 @@
       },
       {
         "name": "The One Italic Rule",
-        "body": "Each heading may turn one phrase italic 500, colored gold (green ground) or gold-deep (ivory). That phrase carries the meaning (\"I'll drive.\", \"full.\", \"Very reasonable rates.\"). Never italicize a whole paragraph.",
+        "body": "Each heading may turn one phrase italic 500, colored gold (green ground) or gold-deep (ivory). That phrase carries the meaning (\"I'll drive.\", \"full.\", \"rates.\"). Never italicize a whole paragraph.",
         "section": "typography"
       },
       {
@@ -455,12 +450,12 @@
       },
       {
         "name": "The Ruled List Rule",
-        "body": "Lists of facts (pack, where, trust, FAQ) are rows separated by 1px rules, top rule on the first item, no bullets, no boxes. Row padding 16-24px vertical. On desktop the trust list turns into three columns each topped by one rule.",
+        "body": "Lists of facts (pack, about facts) are rows separated by 1px rules, top rule on the first item, no bullets, no boxes. Row padding 16-24px vertical.",
         "section": "layout"
       },
       {
-        "name": "The Sticky Headline Rule",
-        "body": "In two-column sections where the right column is long (journey, FAQ), the h2 sticks at 96px from the top.",
+        "name": "No Hidden Content Rule",
+        "body": "Nothing is tucked behind an accordion, tab or tap. Every answer is visible as you scroll.",
         "section": "layout"
       },
       {
@@ -470,7 +465,7 @@
       },
       {
         "name": "The One Ring Rule",
-        "body": "Hover and keyboard focus look the same: a 2px outline at 3px offset. Sections set `--ring` (`on-dark`: cream; `on-light` and the form: gold-deep) and every interactive thing (buttons, big number, FAQ summaries, footer and form links, inputs) uses it. Don't introduce color-fill hovers.",
+        "body": "Hover and keyboard focus look the same: a 2px outline at 3px offset. Sections set `--ring` (`on-dark`: cream; `on-light` and the form: gold-deep) and every interactive thing (buttons, big number, footer and form links, inputs) uses it. Don't introduce color-fill hovers.",
         "section": "components"
       }
     ],
@@ -480,17 +475,17 @@
       "**Do** keep the primary action a `tel:+17323003835` link, gold on green or green on ivory, 60px tall.",
       "**Do** set facts as ruled lists in serif rows before reaching for cards.",
       "**Do** keep body copy at 18px+ and measures at 30-40ch.",
-      "**Do** pause any new animation off screen and give it a reduced-motion still frame.",
-      "**Do** put new rates in the stationery card style (paper, double hairline, 6px)."
+      "**Do** keep motion to the hero road. Add no new animation below the hero; if Ellie asks for one, pause it off screen and give it a reduced-motion still frame.",
+      "**Do** put new rates in the rates section, in the stationery card style (paper, double hairline, 6px)."
     ],
     "donts": [
       "**Don't** use black or neutral grey anywhere, including shadows.",
       "**Don't** use taillight red outside moving imagery.",
       "**Don't** use gold (light) text on ivory or gold-deep on green; it fails contrast on the wrong ground.",
-      "**Don't** wrap sections or list rows in cards; the rates card and the estimate form are the only cards.",
+      "**Don't** wrap sections or list rows in cards; the trailer-carrier note and the estimate form are the only cards.",
       "**Don't** add hover fills or color-swap hovers; hover is the outline ring.",
       "**Don't** let hero copy and light trails overlap; extend the clear-zone instead.",
-      "**Don't** start a second rAF loop for something that can join an existing one."
+      "**Don't** make anything draggable, hover-driven or hidden behind a tap; this audience shouldn't have to discover how the page works."
     ]
   }
 }
