@@ -10,7 +10,7 @@
 - **Sections (4 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, promise names Ed) → How it works (numbered 1-2-3: Call me / Fly / Your car is waiting) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." (call for your flat rate, huge tap-to-call number, text form) → footer.
 - **Contact:** every call link is `tel:+17323003835`. The estimate form (name, where the car is, where it's going, optional when) validates the three required fields (errors linked to the fields for screen readers) and opens a pre-filled text to the same number (tested: the body decodes correctly). While it opens, the button reads "Opening your messages…", then a line appears with the number in case nothing opened (desktop and some in-app browsers ignore `sms:`). Hero has exactly two buttons: Call Ed (filled gold) and Get your rate (outlined).
 - **Reviewed:** Impeccable's detector plus a sweep of every mode except live/onboard, and the finish reviewer (verdict "fix first"); all their material fixes are applied. Detector leftovers are intentional and recorded in `.impeccable/config.json` (tight leading on display headings; green-tinted offset shadow flagged as a glow).
-- **Shareables:** `og.png` 1200x630 for the Facebook preview (re-rendered to match the light hero), shamrock favicon (SVG) and `apple-touch-icon.png`.
+- **Shareables:** `og.png` 1200x630 for the Facebook preview (currently the light hero with the route card), shamrock favicon (SVG) and `apple-touch-icon.png`.
 
 ## Research brief applied (2026-10-14)
 Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
@@ -34,6 +34,7 @@ Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70
 - **Voice:** first person as Ed ("I").
 
 ## Placeholders and gaps
+- **Ed's photo (placeholder, Ellie 2026-10-14):** the hero's route card and the Facebook preview `og.png` both stand in for a photo of Ed. When it arrives: put it in the hero in place of `.route-card` (same right-hand column on desktop, below the Call button on phones), and re-render `og.png` with Ed's photo on the right in place of the route card. Then run the link through Facebook's Sharing Debugger ("Scrape again"), because Facebook caches the old preview.
 - **Rates (critical):** the rates heading in the last section is marked with an HTML comment `RATES PLACEHOLDER`. Ed confirms Thursday. Drop the real numbers or the flat-rate table in there.
 - No email, Facebook, reviews, photos, hours, insurance or years in business, so those are absent from the page. There's no Facebook link under the work because there are no work photos.
 - Texts: "Accepts texts: unknown". The form ("Or text me the details") hands off by SMS, and a call link sits right under it. If Ed doesn't text, change the form button to call, or remove the form.
