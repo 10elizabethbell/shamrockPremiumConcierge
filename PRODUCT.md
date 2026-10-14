@@ -1,0 +1,39 @@
+# Product: Shamrock Transportation website
+
+## Platform
+- Platform: `web`
+- Stack: static single-file HTML/CSS/JS (`index.html`), self-hosted display font in `fonts/`, hosted on GitHub Pages.
+
+## Users
+- **Primary:** snowbirds, mostly 60+, who winter in Florida and summer in New Jersey. They fly between the two and need their car driven the other way. They read on a phone, often inside Facebook's in-app browser, and trust a phone call more than a form. (Age skew per Muse brief; inferred, not measured.)
+- **Secondary:** the owner, Edward (Ed) Brannagan, who sees the site first and should recognize his business, done better than he imagined.
+
+## Purpose
+Turn a business card into a web presence a careful customer can trust with their car, and get them to call Ed for their route's rate.
+
+## Positioning
+Driveaway, not trailer shipping: one driver, the owner, drives your own car between NJ and Florida while you fly. The white-glove / concierge option (Vibe 1 of three briefed by Muse). Out-polishes the folksy competitor Snowbirds I-Drive-You-Fly (snowbirdsflyhome.com).
+
+## Capabilities and constraints
+- Services (verbatim from business card): "Local & Long Distance", "Airport Services Anywhere In Florida", "Very Reasonable Rates".
+- Route: NJ ↔ Florida, seasonal (Ellie, 2026-10-13).
+- Contact: phone 732-300-3835 (Ed's cell). Calls confirmed; texts unknown. No email, no socials, no listings.
+- Card domain: youflyilldrive.com (currently unregistered per Muse, 2026-10-13).
+- No published prices, insurance details, reviews, photos, hours or years in business.
+
+## Brand commitments
+- Name: Shamrock Transportation. Mark: a green shamrock (card). No logo file available yet.
+- Colors: deep Irish green, muted gold trim (Muse/Ellie direction). Ground never black.
+- Tone: concierge, calm, unhurried, upscale; speaks as Ed in first person ("I").
+- Card tagline (verbatim): "Life is a Highway... Drive it All Night Long".
+- Design direction (Ellie, 2026-10-14): elegant and expensive — serif display type, generous whitespace, thin rules, soft shadows, hotel / airline-lounge polish.
+
+## Evidence on hand
+- Business card facts only (via Muse brief 2026-10-13). No photos, reviews or rates.
+
+## Principles
+1. Never invent: rates, insurance, reviews, photos, towns, years. Unknowns are placeholders or omitted.
+2. Calling Ed is the primary action, reachable from every section.
+3. Big type and big tap targets for a 60+ audience on phones.
+4. "Pack the car full" is the headline differentiator after the hero.
+5. Honest objection handling (when a trailer shipper is the better choice) builds trust.
