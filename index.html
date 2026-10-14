@@ -28,7 +28,7 @@
 :root{
   --g-950:#0d2b21;   /* footer: deepest green, never black */
   --g-900:#11352a;   /* hero night ground */
-  --g-800:#174233;   /* journey / trust */
+  --g-800:#174233;   /* journey */
   --g-700:#24573f;
   --leaf:#46a96a;    /* shamrock */
   --ivory:#f5efe2;   /* paper sections */
@@ -91,18 +91,13 @@ p{margin:0;text-wrap:pretty}
 .promise{margin-top:18px;max-width:30ch;font-size:clamp(18px,4.9vw,21px);line-height:1.5;color:var(--cream-soft)}
 .promise strong{color:var(--cream);font-weight:600}
 .hero-actions{display:grid;gap:12px;margin-top:20px;max-width:420px}
-.road{position:relative;flex:1 1 auto;min-height:230px;margin-top:6px;touch-action:none;cursor:grab;
+.road{position:relative;flex:1 1 auto;min-height:230px;margin-top:6px;pointer-events:none;
   /* still frame before JS: faint light trails */
   background:
     linear-gradient(90deg,transparent 10%,rgba(201,169,106,.22) 30%,transparent 46%) 0 34%/100% 2px no-repeat,
     linear-gradient(90deg,transparent 40%,rgba(217,87,63,.25) 62%,transparent 80%) 0 70%/100% 2px no-repeat}
-.road:active{cursor:grabbing}
 .road.live{background:none}
 .road canvas{position:absolute;inset:0;width:100%;height:100%}
-.road-hint{position:absolute;right:var(--gutter);top:6px;font:500 16px/1.3 var(--sans);color:rgba(239,231,212,.8);pointer-events:none;transition:opacity 1.2s var(--ease-out)}
-.road.driven .road-hint{opacity:0}
-.h-mouse{display:none}
-@media (hover:hover) and (pointer:fine){.h-mouse{display:inline}.h-touch{display:none}}
 
 /* ---------- Lane-line dividers ---------- */
 .lane{display:block;height:44px;margin:-1px 0;position:relative;z-index:1}
@@ -126,56 +121,27 @@ section{padding:64px 0 72px}
 
 /* How it works (journey) */
 .journey{background:var(--g-800)}
-.steps{--rail:58px;position:relative;margin:40px 0 0;padding:0 0 0 var(--rail);max-width:640px}
-.steps ol{list-style:none;margin:0;padding:0}
-.steps::before{content:"";position:absolute;left:20px;top:10px;bottom:10px;width:0;border-left:2px dashed var(--rule-dark)}
-.steps::after{content:"";position:absolute;left:20px;top:10px;width:2px;height:var(--done,0px);background:var(--gold)}
-.steps li{position:relative;padding-bottom:42px}
+.steps{list-style:none;counter-reset:step;margin:36px 0 0;padding:0;max-width:640px}
+.steps li{counter-increment:step;position:relative;padding:0 0 32px 64px}
 .steps li:last-child{padding-bottom:0}
-.steps li::before{content:"";position:absolute;left:calc(21px - var(--rail) - 7px);top:10px;width:14px;height:14px;border-radius:50%;background:var(--g-800);border:2px solid var(--gold)}
-.steps h3{font-size:clamp(34px,8.6vw,46px);color:var(--cream)}
-.steps p{margin-top:8px;color:var(--cream-soft);max-width:36ch}
-.steps .car{position:absolute;left:-1px;top:0;width:44px;height:44px;z-index:1;filter:drop-shadow(0 6px 8px rgba(0,0,0,.35));will-change:transform;pointer-events:none}
+.steps li::before{content:counter(step);position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:600 24px/1 var(--serif);font-variant-numeric:lining-nums;color:var(--gold)}
+.steps h3{font-size:clamp(32px,8.2vw,42px);color:var(--cream)}
+.steps p{margin-top:6px;color:var(--cream-soft);max-width:36ch}
 
-/* Where + rates */
-.where-grid{display:grid;gap:56px}
-.where-list{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule-light)}
-.where-list li{padding:18px 0;border-bottom:1px solid var(--rule-light);font:600 clamp(27px,7vw,34px)/1.2 var(--serif);color:var(--ink)}
-.where-list li small{display:block;margin-top:6px;font:400 17px/1.4 var(--sans);color:var(--ink-soft)}
-.rates{position:relative;padding:38px 28px 32px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px}
-.rates .h2{font-size:clamp(40px,10.5vw,60px)}
-.rates .h2 em{font-style:italic;font-weight:500;color:var(--gold-deep)}
-.rates p{margin-top:14px;color:var(--ink-soft)}
-.rates .btn{margin-top:24px}
-
-/* Trust */
-.trust{background:var(--g-800)}
-.trust-list{list-style:none;margin:36px 0 0;padding:0;display:grid;gap:0;border-top:1px solid var(--rule-dark)}
-.trust-list li{padding:24px 2px;border-bottom:1px solid var(--rule-dark)}
-.trust-list h3{font-size:clamp(32px,8vw,42px);color:var(--gold)}
-.trust-list p{margin-top:8px;color:var(--cream-soft);max-width:40ch}
-.trust .h2{max-width:14ch}
-@media (min-width:760px){.trust .h2{max-width:none}}
-
-/* FAQ */
-.faq-list{margin-top:32px;max-width:820px;interpolate-size:allow-keywords}
-.faq-list details::details-content{height:0;overflow:clip;transition:height .45s var(--ease-out),content-visibility .45s allow-discrete}
-.faq-list details[open]::details-content{height:auto}
-.faq-list details{border-bottom:1px solid var(--rule-light)}
-.faq-list details:first-child{border-top:1px solid var(--rule-light)}
-.faq-list summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:64px;padding:16px 0;cursor:pointer;font:600 clamp(24px,6.2vw,30px)/1.22 var(--serif);color:var(--ink);border-radius:6px;outline:2px solid transparent;outline-offset:6px;transition:outline-color .2s}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary:hover{outline-color:var(--gold-deep)}
-.faq-list summary svg{width:26px;height:26px;flex:none;color:var(--ink-soft);transition:transform .5s var(--ease-out),color .2s}
-.faq-list summary:hover svg{color:var(--gold-deep)}
-.faq-list details[open] summary svg{transform:rotate(45deg)}
-.faq-list .ans{padding:0 0 24px;color:var(--ink-soft);max-width:62ch}
-.faq-list .ans p+p{margin-top:12px}
-.faq-list .ans ul{margin:12px 0 0;padding-left:1.1em}
-.faq-list .ans li{margin-top:6px}
+/* About Ed + honest note */
+.about .h2{font-size:clamp(40px,10.5vw,64px)}
+.about-grid{display:grid;gap:44px}
+.facts{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule-light)}
+.facts li{padding:14px 0;border-bottom:1px solid var(--rule-light);font:600 clamp(24px,6.4vw,30px)/1.25 var(--serif);color:var(--ink)}
+.honest{padding:30px 24px 28px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;color:var(--ink-soft)}
+.honest h3{font-size:clamp(28px,7.4vw,36px);color:var(--ink)}
+.honest ul{margin:14px 0 0;padding-left:1.1em}
+.honest li{margin-top:8px}
+.honest p{margin-top:16px}
 
 /* Estimate */
 .estimate .h2{color:var(--cream)}
+.estimate .h2 em{font-style:italic;font-weight:500;color:var(--gold)}
 .bigcall{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:4px 6px;font:600 clamp(42px,12vw,72px)/1 var(--serif);font-variant-numeric:lining-nums tabular-nums;color:var(--gold);text-decoration:none;border-radius:10px;outline:2px solid transparent;outline-offset:4px;transition:outline-color .2s}
 .bigcall:hover{outline-color:var(--cream)}
 .bigcall svg{width:.62em;height:.62em;flex:none}
@@ -192,7 +158,6 @@ form.est h3{font-size:clamp(30px,8vw,38px)}
 .field.bad input{border-color:#a3342a}
 .err{display:none;margin-top:6px;font-size:17px;color:#a3342a}
 .field.bad .err{display:block}
-.two{display:grid;gap:0 14px}
 form.est .btn{width:100%;margin-top:24px}
 form.est .btn:hover{outline-color:var(--gold-deep)}
 .form-ok{margin-top:12px;font-size:17px;color:var(--ink)}
@@ -228,32 +193,24 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   .hero-actions{grid-template-columns:auto auto;justify-content:start;max-width:max-content}
   .road{position:absolute;left:0;right:0;top:0;bottom:0;min-height:0;margin:0}
   .hero-copy{padding-bottom:300px}
-  .road-hint{top:auto;bottom:18px}
   section{padding:104px 0 112px}
   .lane{height:60px}
 
-  .rates{padding:48px 44px 44px;margin-top:8px}
-  .trust-list{grid-template-columns:repeat(3,1fr);gap:0 40px;border-top:0}
-  .trust-list li{border-bottom:0;border-top:1px solid var(--rule-dark);padding-top:28px}
 
   form.est{padding:40px 38px 36px}
   .foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
-  .steps{--rail:72px;margin-top:0}
+  .steps{margin-top:0}
   .journey .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
-  .journey .h2{position:sticky;top:96px}
+  .honest{padding:40px 38px 36px}
 }
 @media (min-width:960px){
   .pack-grid{grid-template-columns:1.05fr 1fr;align-items:center;gap:64px}
-  .where-grid{grid-template-columns:1fr 1fr;align-items:start;gap:64px}
+  .about-grid{grid-template-columns:1.1fr 1fr;align-items:start;gap:64px}
   .est-grid{grid-template-columns:1fr 1.05fr;align-items:start;gap:64px}
   .est-grid{align-items:center}
-  .faq .wrap{display:grid;grid-template-columns:1fr 1.6fr;gap:64px;align-items:start}
-  .faq .h2{position:sticky;top:96px}
-  .faq-list{margin-top:0;max-width:none}
 }
 @media (min-width:1100px){
   .hero h1{font-size:128px}
-  .two{grid-template-columns:1fr 1fr}
 }
 
 @media (prefers-reduced-motion:reduce){
@@ -265,11 +222,11 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 <body>
 <!--
 DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
-THESIS: A night highway seen from above, rendered like a long-exposure photograph: gold headlight trails flowing one way, red taillights the other, and Ed's car in the middle that you can take the wheel of. Calm, expensive, and literally about driving through the night ("Life is a Highway... Drive it All Night Long", from his card).
+THESIS: A night highway seen from above, rendered like a long-exposure photograph: gold headlight trails flowing one way, red taillights the other, and Ed's car cruising steadily in the middle. Calm, expensive, and literally about driving through the night ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, taillight red only in the motion. Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and dashed lane-line dividers that flow like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
-STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: pack it full (the differentiator), how it works in three stops, where he drives + rates by phone, why one driver, honest FAQ, text-or-call estimate.
-FIRST VIEWPORT (phone 390x~700): shamrock wordmark top-left; "You fly. / I'll drive." huge serif, second line gold italic; one-sentence promise; full-width gold "Call Ed" button with the number, outlined "Get a rate estimate" under it; the light-trail highway fills the bottom of the screen and Ed's car drives across it on its own until touched.
-FORM: Single-scroll one-pager, phone-first; signature = touchable long-exposure highway canvas (hero) + flowing lane-line dividers + car riding the route line in "How it works". Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
+STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: pack it full (the differentiator), how it works in three numbered steps, Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
+FIRST VIEWPORT (phone 390x~700): shamrock wordmark top-left; "You fly. / I'll drive." huge serif, second line gold italic; one-sentence promise; full-width gold "Call Ed" button with the number, outlined "Get your rate" under it; the light-trail highway fills the bottom of the screen and Ed's car cruises across it.
+FORM: Single-scroll one-pager, phone-first; signature = calm long-exposure highway canvas in the hero (ambient only, not interactive) + still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -278,14 +235,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     <path d="M0-1C2 6 4 12 8 19" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/>
   </symbol>
   <symbol id="phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
-  <symbol id="topcar" viewBox="-22 -22 44 44">
-    <path d="M-7-19h14a4 4 0 0 1 4 4.5l-.6 29a5 5 0 0 1-5 5h-10.8a5 5 0 0 1-5-5l-.6-29a4 4 0 0 1 4-4.5z" fill="#efe7d4"/>
-    <path d="M-7.6-9.5q7.6-3 15.2 0l-1.6 7h-12z" fill="#24573f"/>
-    <path d="M-6 11h12l1.2 5.2q-7.2 2-14.4 0z" fill="#24573f"/>
-    <rect x="-6" y="-2.5" width="12" height="13.5" rx="2" fill="#e2d6ba"/>
-    <rect x="-8.6" y="-19.6" width="4.4" height="2" rx="1" fill="#fff6dc"/><rect x="4.2" y="-19.6" width="4.4" height="2" rx="1" fill="#fff6dc"/>
-  </symbol>
 </svg>
 
 <header class="hero on-dark" id="top">
@@ -299,7 +248,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <div class="hero-copy">
     <h1>You fly.<em>I'll drive.</em></h1>
-    <p class="promise">I drive your car between <strong>New Jersey and Florida</strong> while you fly, so it's waiting when you land.</p>
+    <p class="promise">I drive your car between <strong>New Jersey and Florida</strong>, down for winter and back for summer, while you fly.</p>
     <div class="hero-actions">
       <a class="btn btn-gold" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>Call Ed <span class="num">732-300-3835</span></a>
       <a class="btn btn-ghost" href="#estimate">Get your rate</a>
@@ -308,7 +257,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <div class="road" id="road" aria-hidden="true">
     <canvas id="roadCanvas"></canvas>
-    <span class="road-hint"><span class="h-touch">Drag on the road to drive</span><span class="h-mouse">Move over the road to drive</span></span>
   </div>
 </header>
 
@@ -337,82 +285,36 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 <section class="journey on-dark" id="how">
   <div class="wrap">
     <h2 class="h2">How it works</h2>
-    <div class="steps" id="steps">
-    <svg class="car" id="stepCar" aria-hidden="true"><use href="#topcar" transform="rotate(180 22 22)"/></svg>
-    <ol>
+    <ol class="steps">
       <li><h3>Call me</h3><p>Tell me where the car is, where it's going, and the day you fly.</p></li>
       <li><h3>Fly</h3><p>Hand me the keys and catch your flight. I drive the car myself.</p></li>
       <li><h3>Your car is waiting</h3><p>It's there when you land, packed the way you left it.</p></li>
     </ol>
-    </div>
   </div>
 </section>
 
 <div class="lane" data-from="#174233" data-to="#f5efe2" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
 
-<section class="where on-light" id="where">
-  <div class="wrap where-grid">
+<section class="about on-light" id="about">
+  <div class="wrap about-grid">
+    <!-- CONFIRM WITH ED: sole driver, one car per trip -->
     <div>
-      <h2 class="h2">Where I drive</h2>
-      <ul class="where-list">
-        <li>New Jersey to Florida and back<small>South for the winter, north for the summer.</small></li>
+      <h2 class="h2">The man you call is the man who drives.</h2>
+      <p class="lede">I'm Edward Brannagan, owner and driver of Shamrock Transportation. I drive one car at a time, and the number on this page is my cell.</p>
+      <ul class="facts">
+        <li>New Jersey to Florida and back</li>
         <li>Local &amp; long distance</li>
         <li>Airport service anywhere in Florida</li>
       </ul>
     </div>
-    <!-- RATES PLACEHOLDER: Ed's real rates pending (brief: confirm Thursday). Replace the paragraph below once confirmed; never invent numbers. -->
-    <div class="rates" id="rates">
-      <h2 class="h2"><em>Very reasonable rates.</em></h2>
-      <p>Every route gets its own flat rate. Call with where the car is, where it's going and when, and I'll give you the price on the phone.</p>
-      <a class="btn btn-green" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>Call for your rate</a>
-    </div>
-  </div>
-</section>
-
-<div class="lane" data-from="#f5efe2" data-to="#174233" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
-
-<section class="trust on-dark" id="trust">
-  <div class="wrap">
-    <h2 class="h2">The man you call is the man who drives.</h2>
-    <!-- CONFIRM WITH ED: sole driver, one car per trip -->
-    <ul class="trust-list">
-      <li><h3>One driver: me</h3><p>I'm Edward Brannagan, owner and driver of Shamrock Transportation. I'm the one who drives your car.</p></li>
-      <li><h3>One car at a time</h3><p>I drive one car on every trip, and on your trip it's yours.</p></li>
-      <li><h3>A call away</h3><p>The number on this page is my cell.</p></li>
-    </ul>
-  </div>
-</section>
-
-<div class="lane" data-from="#174233" data-to="#f5efe2" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
-
-<section class="faq on-light" id="faq">
-  <div class="wrap">
-    <h2 class="h2">Questions</h2>
-    <div class="faq-list">
-      <details>
-        <summary>What does it cost?<svg aria-hidden="true"><use href="#plus"/></svg></summary>
-        <div class="ans"><p>It depends on the route. Call me at <a href="tel:+17323003835">732-300-3835</a> with where the car is and where it's going, and I'll give you a flat rate for the trip.</p></div>
-      </details>
-      <details>
-        <summary>Can I really pack the car?<svg aria-hidden="true"><use href="#plus"/></svg></summary>
-        <div class="ans"><p>Yes. That's the big difference from a trailer carrier. Load the trunk and back seat with what you're bringing for the season, and leave me room to drive.</p></div>
-      </details>
-      <details>
-        <summary>Do you drive north in the spring too?<svg aria-hidden="true"><use href="#plus"/></svg></summary>
-        <div class="ans"><p>Yes. I drive cars down to Florida for the winter and back up to New Jersey for the summer.</p></div>
-      </details>
-      <details>
-        <summary>When is a trailer carrier the better choice?<svg aria-hidden="true"><use href="#plus"/></svg></summary>
-        <div class="ans">
-          <p>I'd rather you get the right service than the wrong one from me. A carrier makes more sense when:</p>
-          <ul>
-            <li>the lowest price matters more than when the car arrives, and you can wait for an open spot on a truck;</li>
-            <li>the car doesn't run, so it can't be driven;</li>
-            <li>it's a collector car you'd rather not put miles on.</li>
-          </ul>
-          <p>For everyone else, having your car driven down, packed, by one person is the easier way.</p>
-        </div>
-      </details>
+    <div class="honest">
+      <h3>When a trailer carrier is the better choice</h3>
+      <ul>
+        <li>The lowest price matters more than when the car arrives.</li>
+        <li>The car doesn't run.</li>
+        <li>It's a collector car you'd rather not put miles on.</li>
+      </ul>
+      <p>For everyone else, having your car driven down, packed, by one person is the easier way.</p>
     </div>
   </div>
 </section>
@@ -421,26 +323,21 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <section class="estimate on-dark" id="estimate">
   <div class="wrap est-grid">
+    <!-- RATES PLACEHOLDER: Ed's real rates pending (brief: confirm Thursday). Replace the paragraph below once confirmed; never invent numbers. -->
     <div>
-      <h2 class="h2">Get your rate</h2>
-      <p class="lede">The fastest way is a phone call.</p>
+      <h2 class="h2">Very reasonable <em>rates.</em></h2>
+      <p class="lede">Every route gets its own flat rate. Call me and I'll give you the price on the phone.</p>
       <a class="bigcall" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>732-300-3835</a>
     </div>
     <form class="est" id="est" novalidate>
       <h3>Or text me the details</h3>
       <div class="field"><label for="f-name">Your name</label><input id="f-name" name="name" aria-describedby="e-name" autocomplete="name" required><p class="err" id="e-name" role="alert">Please add your name so I know who's texting.</p></div>
-      <div class="two">
-        <div class="field"><label for="f-from">Car is in</label><input id="f-from" name="from" aria-describedby="e-from" autocomplete="address-level2" placeholder="Town, state" required><p class="err" id="e-from" role="alert">Where is the car now?</p></div>
-        <div class="field"><label for="f-to">Going to</label><input id="f-to" name="to" aria-describedby="e-to" autocomplete="off" placeholder="Town, state" required><p class="err" id="e-to" role="alert">Where should I drive it?</p></div>
-      </div>
-      <div class="two">
-        <div class="field"><label for="f-when">About when <i>(optional)</i></label><input id="f-when" name="when" placeholder="e.g. early November"></div>
-        <div class="field"><label for="f-car">Car <i>(optional)</i></label><input id="f-car" name="car" autocomplete="off" placeholder="Year, make, model"></div>
-      </div>
-      <div class="field"><label for="f-notes">Anything else <i>(optional)</i></label><textarea id="f-notes" name="notes" placeholder="Airport you're flying into, what you're packing…"></textarea></div>
+      <div class="field"><label for="f-from">Where is the car now?</label><input id="f-from" name="from" aria-describedby="e-from" autocomplete="address-level2" placeholder="Town, state" required><p class="err" id="e-from" role="alert">Please add the town the car is in.</p></div>
+      <div class="field"><label for="f-to">Where should I drive it?</label><input id="f-to" name="to" aria-describedby="e-to" autocomplete="off" placeholder="Town, state" required><p class="err" id="e-to" role="alert">Please add where the car is going.</p></div>
+      <div class="field"><label for="f-when">About when? <i>(optional)</i></label><input id="f-when" name="when" placeholder="For example, early November"></div>
       <button class="btn btn-green" type="submit">Text my details to Ed</button>
       <p class="form-ok" role="status" hidden>If your messages app didn't open, call or text me at <a href="tel:+17323003835">732-300-3835</a>.</p>
-      <p class="form-foot">This opens a text to 732-300-3835 with your details filled in. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
+      <p class="form-foot">This opens a text message to me with your details filled in. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
     </form>
   </div>
 </section>
@@ -469,20 +366,16 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 var REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 var PHONE = matchMedia('(max-width: 759px)').matches;
 
-/* ===== Hero highway: long-exposure light trails + Ed's car you can drive ===== */
+/* ===== Hero highway: calm long-exposure light trails, Ed's car cruising through (ambient, not interactive) ===== */
 (function () {
   var CFG = {
-    LANES: PHONE ? 6 : 8,          // total lanes (half each direction)
-    STREAKS_PER_LANE: PHONE ? 6 : 11,
-    SPEED_MIN: 140, SPEED_MAX: 300, // px/s
-    STREAK_MIN: 50, STREAK_MAX: 150,
-    SWELL_AMP: PHONE ? 16 : 26,     // whole-road curve
-    RIPPLE_AMP: 4,
+    LANES: PHONE ? 6 : 8,           // total lanes (half each direction)
+    STREAKS_PER_LANE: PHONE ? 3 : 5,
+    SPEED_MIN: 45, SPEED_MAX: 85,   // px/s, slow and steady
+    STREAK_MIN: 70, STREAK_MAX: 170,
+    SWELL_AMP: PHONE ? 12 : 20,     // gentle fixed curve in the road (does not move)
     CAR_LEN: PHONE ? 36 : 44, CAR_W: PHONE ? 17 : 20,
-    CAR_AUTO_SPEED: PHONE ? 70 : 95,
-    PUSH: PHONE ? 30 : 40,          // how far lanes part around the car
-    SPRING: 38, DAMP: 7.5,
-    IDLE_MS: 2600,                  // hand the wheel back after this long untouched
+    CAR_SPEED: PHONE ? 38 : 50,     // px/s, one lane, no weaving
     LANE_TOP: PHONE ? .10 : .50,    // road band inside the canvas (fractions of its height, at the left edge)
     LANE_BOT: PHONE ? .62 : .97,
     TILT: PHONE ? 0 : .36           // desktop: the road sweeps up toward the right, away from the text
@@ -491,18 +384,15 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
   var cv = document.getElementById('roadCanvas');
   if (!road || !cv) return;
   var ctx = cv.getContext('2d');
-  var W = 0, H = 0, DPR = 1, lanes = [], streaks = [];
-  var car = { x: 60, y: 0, vx: 0, vy: 0, a: 0 };
-  var trail = [];
-  var ptr = { active: false, cx: 0, cy: 0, last: -1e9 };
-  var t0 = performance.now(), last = t0, running = false, visible = true;
+  var W = 0, H = 0, DPR = 1, lanes = [], streaks = [], carLane = 0, carX = 0;
+  var last = performance.now(), running = false, visible = true;
 
   function rand(a, b) { return a + Math.random() * (b - a); }
 
   function size() {
     var r = road.getBoundingClientRect();
     var w = Math.round(r.width), h = Math.round(r.height);
-    if (w === W && h === H) return false;   // phones fire resize mid-drag: only rebuild on a real size change
+    if (w === W && h === H) return false;   // phones fire resize on scroll: only rebuild on a real size change
     W = w; H = h; DPR = Math.min(window.devicePixelRatio || 1, 2);
     cv.width = W * DPR; cv.height = H * DPR;
     ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
@@ -533,32 +423,23 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     var gap = (bot - top) / (n - 1);
     for (var i = 0; i < n; i++) {
       var dir = i < n / 2 ? -1 : 1;           // upper half: oncoming headlights; lower half: taillights
-      lanes.push({ base: top + i * gap, dir: dir, ph: Math.random() * 6.28 });
+      lanes.push({ base: top + i * gap, dir: dir });
       for (var k = 0; k < CFG.STREAKS_PER_LANE; k++) {
-        streaks.push({ lane: i, x: rand(-200, W + 200), v: rand(CFG.SPEED_MIN, CFG.SPEED_MAX), len: rand(CFG.STREAK_MIN, CFG.STREAK_MAX), b: rand(.45, 1), ph: Math.random() * 6.28 });
+        streaks.push({ lane: i, x: rand(-200, W + 200), v: rand(CFG.SPEED_MIN, CFG.SPEED_MAX), len: rand(CFG.STREAK_MIN, CFG.STREAK_MAX), b: rand(.45, 1) });
       }
     }
-    if (!car.y) car.y = lanes[Math.floor(n * .75)].base;
+    carLane = Math.floor(n * .75);
+    if (!carX) carX = W * 0.45;
   }
 
-  function laneY(i, x, t) {
-    var L = lanes[i];
-    var y = L.base + roadSwell(x, t)
-      + CFG.RIPPLE_AMP * Math.sin(x * 0.012 - t * 1.6 + L.ph);
-    // part around the car like traffic giving it room
-    var dx = x - car.x, dy = L.base - (car.y - roadSwell(car.x, t));
-    var g = Math.exp(-(dx * dx) / (2 * 70 * 70));
-    var s = dy / (Math.abs(dy) + 8);
-    y += s * CFG.PUSH * Math.exp(-(dy * dy) / (2 * 34 * 34)) * g;
-    return y;
-  }
-  function roadSwell(x, t) {
+  function laneY(i, x) { return lanes[i].base + roadSwell(x); }
+  function roadSwell(x) {
     var u = Math.max(0, x / (W || 1));
-    return CFG.SWELL_AMP * Math.sin(x * 0.0042 + t * 0.55) + CFG.SWELL_AMP * 0.45 * Math.sin(x * 0.0019 - t * 0.31 + 1.7)
+    return CFG.SWELL_AMP * Math.sin(x * 0.0042) + CFG.SWELL_AMP * 0.45 * Math.sin(x * 0.0019 + 1.7)
       - CFG.TILT * H * Math.pow(u, 1.5);
   }
 
-  function drawLaneMarks(t) {
+  function drawLaneMarks() {
     var n = lanes.length;
     ctx.lineWidth = 1;
     for (var i = 0; i < n - 1; i++) {
@@ -569,7 +450,7 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
       for (var o = 0; o < offs.length; o++) {
         ctx.beginPath();
         for (var x = -10; x <= W + 10; x += 14) {
-          var y = (laneY(i, x, t) + laneY(i + 1, x, t)) / 2 + offs[o];
+          var y = (laneY(i, x) + laneY(i + 1, x)) / 2 + offs[o];
           x === -10 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
         }
         ctx.stroke();
@@ -578,19 +459,18 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     ctx.setLineDash([]);
   }
 
-  function drawStreak(s, t) {
+  function drawStreak(s) {
     var L = lanes[s.lane], head = s.x, tail = s.x - L.dir * s.len;
     var steps = 7, warm = L.dir < 0;
-    var flick = s.b * (0.75 + 0.25 * Math.sin(t * 2.3 + s.ph));
-    var hx = head, hy = laneY(s.lane, head, t), tx = tail, ty = laneY(s.lane, tail, t);
+    var hx = head, hy = laneY(s.lane, head), tx = tail, ty = laneY(s.lane, tail);
     var gr = ctx.createLinearGradient(tx, ty, hx, hy);
     var c = warm ? '255,236,190' : '217,87,63';
     gr.addColorStop(0, 'rgba(' + c + ',0)');
-    gr.addColorStop(1, 'rgba(' + c + ',' + (0.85 * flick).toFixed(3) + ')');
+    gr.addColorStop(1, 'rgba(' + c + ',' + (0.75 * s.b).toFixed(3) + ')');
     ctx.strokeStyle = gr;
     ctx.beginPath();
     for (var k = 0; k <= steps; k++) {
-      var x = tail + (head - tail) * (k / steps), y = laneY(s.lane, x, t);
+      var x = tail + (head - tail) * (k / steps), y = laneY(s.lane, x);
       k ? ctx.lineTo(x, y) : ctx.moveTo(x, y);
     }
     ctx.lineWidth = warm ? 2.2 : 1.8; ctx.stroke();
@@ -598,20 +478,11 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     ctx.globalAlpha = 0.22; ctx.lineWidth = 8; ctx.stroke(); ctx.globalAlpha = 1;
   }
 
-  function drawCar(t) {
-    // red taillight ribbon behind the car
-    if (trail.length > 2) {
-      ctx.lineCap = 'round';
-      for (var k = 1; k < trail.length; k++) {
-        var a = k / trail.length;
-        ctx.strokeStyle = 'rgba(217,87,63,' + (a * 0.55).toFixed(3) + ')';
-        ctx.lineWidth = 1 + a * 3;
-        ctx.beginPath(); ctx.moveTo(trail[k - 1].x, trail[k - 1].y); ctx.lineTo(trail[k].x, trail[k].y); ctx.stroke();
-      }
-    }
+  function drawCar() {
     var Lc = CFG.CAR_LEN, Wc = CFG.CAR_W;
+    var y = laneY(carLane, carX), a = Math.atan2(laneY(carLane, carX + 6) - y, 6);
     ctx.save();
-    ctx.translate(car.x, car.y); ctx.rotate(car.a);
+    ctx.translate(carX, y); ctx.rotate(a);
     // headlight beams
     ctx.globalCompositeOperation = 'lighter';
     for (var side = -1; side <= 1; side += 2) {
@@ -646,52 +517,25 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
 
   function step(now) {
     var dt = Math.min(0.05, (now - last) / 1000); last = now;
-    var t = (now - t0) / 1000;
     size();
-    // target: the finger/mouse while driving, otherwise autopilot weaving through the taillight lanes
-    var r = road.getBoundingClientRect(), tx, ty, driving = ptr.active || now - ptr.last < CFG.IDLE_MS;
-    if (driving) {
-      tx = ptr.cx - r.left; ty = ptr.cy - r.top;
-    } else {
-      var n = lanes.length, lo = lanes[n / 2].base, hi = lanes[n - 1].base;
-      tx = car.x + CFG.CAR_AUTO_SPEED * 0.6;
-      ty = (lo + hi) / 2 + (hi - lo) / 2 * Math.sin(t * 0.45) + roadSwell(car.x, t);
-    }
-    tx = Math.max(-20, Math.min(W + 60, tx)); ty = Math.max(CFG.CAR_W, Math.min(H - CFG.CAR_W, ty));
-    if (driving) {
-      car.vx += ((tx - car.x) * CFG.SPRING - car.vx * CFG.DAMP) * dt;
-      car.vy += ((ty - car.y) * CFG.SPRING - car.vy * CFG.DAMP) * dt;
-    } else {
-      car.vx += ((CFG.CAR_AUTO_SPEED - car.vx) * 1.5) * dt;
-      car.vy += ((ty - car.y) * 6 - car.vy * 4) * dt;
-    }
-    car.x += car.vx * dt; car.y += car.vy * dt;
-    if (!driving && car.x > W + 70) { car.x = -70; trail.length = 0; }
-    var sp = Math.hypot(car.vx, car.vy);
-    if (sp > 12) {
-      var want = Math.atan2(car.vy, car.vx), d = want - car.a;
-      while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI;
-      car.a += d * Math.min(1, dt * 8);
-    }
-    var back = { x: car.x - Math.cos(car.a) * CFG.CAR_LEN / 2, y: car.y - Math.sin(car.a) * CFG.CAR_LEN / 2 };
-    trail.push(back); if (trail.length > 46) trail.shift();
-
+    carX += CFG.CAR_SPEED * dt;
+    if (carX > W + 70) carX = -70;
     for (var i = 0; i < streaks.length; i++) {
       var s = streaks[i], L = lanes[s.lane];
       s.x += L.dir * s.v * dt;
       if (L.dir > 0 && s.x - s.len > W + 20) { s.x = -rand(20, 260); s.v = rand(CFG.SPEED_MIN, CFG.SPEED_MAX); }
       if (L.dir < 0 && s.x + s.len < -20) { s.x = W + rand(20, 260); s.v = rand(CFG.SPEED_MIN, CFG.SPEED_MAX); }
     }
-    draw(t);
+    draw();
   }
 
-  function draw(t) {
+  function draw() {
     ctx.clearRect(0, 0, W, H);
-    drawLaneMarks(t);
+    drawLaneMarks();
     ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
-    for (var i = 0; i < streaks.length; i++) drawStreak(streaks[i], t);
+    for (var i = 0; i < streaks.length; i++) drawStreak(streaks[i]);
     ctx.globalCompositeOperation = 'source-over';
-    drawCar(t);
+    drawCar();
     // keep the words clear: erase a soft-edged zone behind the hero copy
     if (clear) {
       ctx.globalCompositeOperation = 'destination-out';
@@ -716,86 +560,40 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
   }
   function start() { if (!running && !REDUCED) { running = true; last = performance.now(); requestAnimationFrame(loop); } }
 
-  function setPtr(x, y) { ptr.cx = x; ptr.cy = y; ptr.last = performance.now(); road.classList.add('driven'); }
-  road.addEventListener('pointerdown', function (e) { ptr.active = true; setPtr(e.clientX, e.clientY); if (e.pointerType !== 'mouse') e.preventDefault(); });
-  road.addEventListener('pointermove', function (e) { if (e.pointerType === 'mouse' || ptr.active) setPtr(e.clientX, e.clientY); });
-  window.addEventListener('pointerup', function () { ptr.active = false; });
-  window.addEventListener('pointercancel', function () { ptr.active = false; });
-  road.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') ptr.active = false; });
-  // touch fallback for in-app browsers that are stingy with pointer events
-  road.addEventListener('touchstart', function (e) { var p = e.touches[0]; ptr.active = true; setPtr(p.clientX, p.clientY); }, { passive: true });
-  road.addEventListener('touchmove', function (e) { var p = e.touches[0]; setPtr(p.clientX, p.clientY); }, { passive: true });
-  road.addEventListener('touchend', function () { ptr.active = false; }, { passive: true });
-
   size();
   road.classList.add('live');
-  if (document.fonts) document.fonts.ready.then(measureClear);
-  window.addEventListener('resize', measureClear);
-  if (REDUCED) {
-    road.style.touchAction = 'auto'; road.style.cursor = 'default'; road.querySelector('.road-hint').hidden = true;
-    car.x = W * 0.45; draw(0); return;
-  }
+  if (document.fonts) document.fonts.ready.then(function () { measureClear(); if (REDUCED) draw(); });
+  window.addEventListener('resize', function () { measureClear(); if (REDUCED) { size(); draw(); } });
+  if (REDUCED) { draw(); return; }
   new IntersectionObserver(function (es) { visible = es[0].isIntersecting; if (visible) start(); }).observe(road);
   start();
-  window.__road = { car: car, ptr: ptr };
 })();
 
-/* ===== Lane-line dividers: road markings that flow between sections ===== */
+/* ===== Lane-line dividers: still road markings between sections ===== */
 (function () {
-  var CFG = { AMP: 7, SPEED: 8 /* dash px/s */, INSET: 11 /* marking sits inside the lower colour */ };
+  var INSET = 11;   // marking sits inside the lower colour
   var lanes = [].slice.call(document.querySelectorAll('.lane'));
-  var vis = new Set();
   lanes.forEach(function (el, i) {
-    var svg = el.querySelector('svg');
-    svg.style.background = el.dataset.from;
+    el.querySelector('svg').style.background = el.dataset.from;
     el.querySelector('.fl').setAttribute('fill', el.dataset.to);
     el._i = i;
   });
-  function shape(el, t) {
+  function shape(el) {
     var w = Math.round(el.clientWidth) || 1, h = el.clientHeight || 44;
-    if (el._w !== w || el._h !== h) { el._w = w; el._h = h; el.querySelector('svg').setAttribute('viewBox', '0 0 ' + w + ' ' + h); }
+    if (el._w === w && el._h === h) return;
+    el._w = w; el._h = h; el.querySelector('svg').setAttribute('viewBox', '0 0 ' + w + ' ' + h);
     var mid = h * 0.4, d = '', dl = '', ph = el._i * 1.3;
     for (var x = 0; x <= w + 20; x += 20) {
-      var y = mid + CFG.AMP * Math.sin(x * 0.006 + t * 0.6 + ph) + 2.5 * Math.sin(x * 0.017 - t * 1.1 + ph);
+      var y = mid + 7 * Math.sin(x * 0.006 + ph) + 2.5 * Math.sin(x * 0.017 + ph);
       d += (x ? 'L' : 'M') + x + ' ' + y.toFixed(1);
-      dl += (x ? 'L' : 'M') + x + ' ' + (y + CFG.INSET).toFixed(1);
+      dl += (x ? 'L' : 'M') + x + ' ' + (y + INSET).toFixed(1);
     }
     el.querySelector('.ln').setAttribute('d', dl);
-    el.querySelector('.ln').style.strokeDashoffset = (-t * CFG.SPEED).toFixed(1);
     el.querySelector('.fl').setAttribute('d', d + 'L' + (w + 20) + ' ' + (h + 2) + 'L0 ' + (h + 2) + 'Z');
   }
-  lanes.forEach(function (el) { shape(el, 0); });
-  if (REDUCED) return;
-  var io = new IntersectionObserver(function (es) {
-    es.forEach(function (e) { e.isIntersecting ? vis.add(e.target) : vis.delete(e.target); });
-    if (vis.size && !running) { running = true; requestAnimationFrame(tick); }
-  });
-  var running = false, t0 = performance.now();
-  lanes.forEach(function (el) { io.observe(el); });
-  function tick(now) {
-    if (!vis.size) { running = false; return; }
-    var t = (now - t0) / 1000;
-    vis.forEach(function (el) { shape(el, t); });
-    requestAnimationFrame(tick);
-  }
-})();
-
-/* ===== Car rides the route line in "How it works" ===== */
-(function () {
-  var steps = document.getElementById('steps'), car = document.getElementById('stepCar');
-  if (!steps || !car) return;
-  var queued = false;
-  function place() {
-    queued = false;
-    var r = steps.getBoundingClientRect(), vh = window.innerHeight;
-    var p = (vh * 0.6 - r.top) / r.height;            // car sits where the reader's eye is
-    p = Math.max(0, Math.min(1, p));
-    car.style.transform = 'translateY(' + (p * (r.height - 44)).toFixed(1) + 'px)';
-    steps.style.setProperty('--done', (p * (r.height - 20)).toFixed(0) + 'px');
-  }
-  window.addEventListener('scroll', function () { if (!queued) { queued = true; requestAnimationFrame(place); } }, { passive: true });
-  window.addEventListener('resize', place);
-  place();
+  function all() { lanes.forEach(shape); }
+  all();
+  window.addEventListener('resize', all);
 })();
 
 /* ===== Estimate form: composes a text to Ed ===== */
@@ -816,8 +614,6 @@ var PHONE = matchMedia('(max-width: 759px)').matches;
     var v = function (n) { return form.elements[n].value.trim(); };
     var lines = ["Hi Ed, I'd like a rate for driving my car.", 'Name: ' + v('name'), 'From: ' + v('from'), 'To: ' + v('to')];
     if (v('when')) lines.push('When: ' + v('when'));
-    if (v('car')) lines.push('Car: ' + v('car'));
-    if (v('notes')) lines.push('Notes: ' + v('notes'));
     var href = 'sms:' + NUMBER + '?&body=' + encodeURIComponent(lines.join('\n'));
     form.dataset.href = href;
     var btn = form.querySelector('button[type=submit]'), label = btn.textContent;
