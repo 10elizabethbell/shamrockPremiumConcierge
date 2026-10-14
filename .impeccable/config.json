@@ -20,6 +20,90 @@
         "value": "line-height 1.26x (need >=1.3)",
         "createdAt": "2026-10-14T13:58:25.683Z",
         "reason": "agent triage: multi-line Cormorant display headings set intentionally tight; body copy is 1.5-1.6"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "createdAt": "2026-10-14T14:27:16.766Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift (white input fill, noted in DESIGN.md)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#6b7a72",
+        "createdAt": "2026-10-14T14:27:16.832Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift (input placeholder)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "21px",
+        "createdAt": "2026-10-14T14:27:16.900Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "56px",
+        "createdAt": "2026-10-14T14:27:16.967Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "104px",
+        "createdAt": "2026-10-14T14:27:17.036Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "46px",
+        "createdAt": "2026-10-14T14:27:17.101Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "40px",
+        "createdAt": "2026-10-14T14:27:17.167Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "60px",
+        "createdAt": "2026-10-14T14:27:17.234Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "30px",
+        "createdAt": "2026-10-14T14:27:17.300Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "38px",
+        "createdAt": "2026-10-14T14:27:17.367Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "17px",
+        "createdAt": "2026-10-14T14:27:17.434Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "28px",
+        "createdAt": "2026-10-14T14:27:17.501Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "16px",
+        "createdAt": "2026-10-14T14:27:17.567Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "128px",
+        "createdAt": "2026-10-14T14:27:17.632Z",
+        "reason": "agent triage: shipped value DESIGN.md was derived from; documenter omitted it from the ramp/palette, not drift"
       }
     ]
   }
