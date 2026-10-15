@@ -7,7 +7,7 @@
 - **Hero (replaced 2026-10-14, Ellie: the night-highway hero was too much for this audience):** light paper first screen with the headline, one sentence naming Ed, ONE green Call button, an "or text me instead" link, and a still route card (gold dotted line from a New Jersey pin to a Florida pin with Ed's car on it). It's built to swap for a photo of Ed beside a car once he supplies one. **Nothing on the page animates now:** the hero canvas and its script are deleted.
 - **Carried through the page:** still, wavy section seams with a gold dashed lane marking painted just inside the lower colour. Nothing below the hero moves.
 - **Simplified 2026-10-14 (Ellie: audience is 40-70, first version was too much):** removed the drivable car, the drag hint, the moving seams and the scroll-driven step car; cut "Where I drive", the separate rates card, the 3-part trust list and the FAQ accordion (no hidden content now); form cut from 6 fields to 4 with plain-question labels.
-- **Sections (3 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, promise names Ed) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." ($1 per mile, huge tap-to-call number, text form) → footer.
+- **Sections (3 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, the Call Ed button names him; no sentence under the headline since 2026-10-15) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." ($1 per mile, huge tap-to-call number, text form) → footer.
 - **Contact:** every call link is `tel:+17323003835`. The estimate form (name, where the car is, where it's going, optional when) validates the three required fields (errors linked to the fields for screen readers) and opens a pre-filled text to the same number (tested: the body decodes correctly). While it opens, the button reads "Opening your messages…", then a line appears with the number in case nothing opened (desktop and some in-app browsers ignore `sms:`). Hero has exactly two buttons: Call Ed (filled gold) and Get your rate (outlined).
 - **Reviewed:** Impeccable's detector plus a sweep of every mode except live/onboard, and the finish reviewer (verdict "fix first"); all their material fixes are applied. Detector leftovers are intentional and recorded in `.impeccable/config.json` (tight leading on display headings; green-tinted offset shadow flagged as a glow).
 - **Shareables:** `og.png` 1200x630 for the Facebook preview (currently the light hero with the route card), shamrock favicon (SVG) and `apple-touch-icon.png`.
@@ -15,7 +15,7 @@
 ## Research brief applied (2026-10-14)
 Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
 - Header: wordmark only; desktop adds 2 plain links (Meet Ed, Rates). The number was in the header too, but Ellie removed it on 2026-10-15 because the hero's Call Ed button already shows it.
-- Hero answers what / who / where / contact in one screen: eyebrow "Personal car delivery · New Jersey & Florida", promise now opens "I'm Ed Brannagan" and says you talk to him directly. Second action is now an "or text me instead" link (jumps to the text form).
+- Hero answers what / who / where / contact in one screen: eyebrow "Personal car delivery · New Jersey & Florida", the sentence under the headline was removed by Ellie on 2026-10-15, so Ed is named in the hero only by the Call Ed button. Second action is now an "or text me instead" link (jumps to the text form).
 - "Meet your driver" label over the about section; form now says what happens next ("I'll get back to you with your rate").
 - Not applied, on purpose:
   - **Sticky mobile Call button:** conflicts with your no-sticky-bar rule. The number is on the hero's Call Ed button instead. Your call.
@@ -25,7 +25,7 @@ Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70
 
 ## Assumptions I made
 - **Shamrock mark is drawn by me**, not traced from Ed's card (no card scan was available, and the brief says to ask before using it publicly). It's a simple three-leaf shamrock in a mid green. Swap in the real emblem once Ed or Ellie OKs the card photo.
-- **Headline "You fly. I'll drive."** comes from the card's domain (youflyilldrive.com). The promise "so it's waiting when you land" is the brief's concierge line; it implies timing Ed hasn't confirmed.
+- **Headline "You fly. I'll drive."** comes from the card's domain (youflyilldrive.com).
 - **About section** ("I drive one car at a time, and the number on this page is my cell") is marked `<!-- CONFIRM WITH ED -->` in the HTML: the brief says Ed is the only *known* driver.
 - **"Airport service anywhere in Florida"** is verbatim from the card. I didn't say what it includes (dropping the car at the airport? picking him up?).
 - **Footer tagline** "Life is a Highway… Drive it All Night Long" is verbatim from the card. "All night long" might worry a careful 60+ customer, so consider cutting it.

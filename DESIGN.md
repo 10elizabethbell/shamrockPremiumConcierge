@@ -190,7 +190,7 @@ The old night-highway colors are retired: taillight red is gone with the canvas,
 - **List item**: ruled serif rows (about facts 600 at `clamp(24px, 6.4vw, 30px)` / 1.25).
 - **Route label**: serif 600 at 25px inside the route card ("New Jersey", "Florida"); the wordmark "Shamrock" is set at the same size (28px in the footer, 22px under 370px).
 - **Phone number**: serif 600 `clamp(42px, 12vw, 72px)`, lining tabular figures, gold. The number is set as type, not as a button.
-- **Lede**: one sentence under an h2, max 34ch, soft color. The hero promise is a lede at 18-21px, max 32ch.
+- **Lede**: one sentence under an h2, max 34ch, soft color.
 - **Body**: 18px / 1.6 (19px from 760px). Measure 30-40ch.
 - **Label**: uppercase tracked sans, 12.5-15px, 0.12-0.2em. Only for the wordmark's "Transportation".
 
