@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Shamrock Transportation · You fly, I'll drive · New Jersey to Florida</title>
-<meta name="description" content="Edward Brannagan drives your car between New Jersey and Florida while you fly. Call 732-300-3835 for your route's rate.">
+<meta name="description" content="Edward Brannagan drives your car between New Jersey and Florida while you fly. $1 per mile. Call 732-300-3835.">
 <meta name="theme-color" content="#fbf8f1">
 <link rel="canonical" href="https://10elizabethbell.github.io/shamrockPremiumConcierge/">
 <meta property="og:type" content="website">
@@ -138,6 +138,8 @@ section{padding:64px 0 72px}
 /* Estimate */
 .estimate .h2{color:var(--cream)}
 .estimate .h2 em{font-style:italic;font-weight:500;color:var(--gold)}
+.price{display:flex;align-items:baseline;gap:.35em;margin-top:26px;padding:14px 0;border-top:1px solid var(--rule-dark);border-bottom:1px solid var(--rule-dark);font:500 clamp(28px,7.4vw,36px)/1 var(--serif);color:var(--cream)}
+.price .amt{font:600 clamp(64px,17vw,96px)/1 var(--serif);font-variant-numeric:lining-nums;color:var(--gold)}
 .bigcall{display:inline-flex;align-items:center;gap:14px;margin-top:22px;padding:4px 6px;font:600 clamp(42px,12vw,72px)/1 var(--serif);font-variant-numeric:lining-nums tabular-nums;color:var(--gold);text-decoration:none;border-radius:10px;outline:2px solid transparent;outline-offset:4px;transition:outline-color .2s}
 .bigcall:hover{outline-color:var(--cream)}
 .bigcall svg{width:.62em;height:.62em;flex:none}
@@ -320,10 +322,11 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
 <section class="estimate on-dark" id="estimate">
   <div class="wrap est-grid">
-    <!-- RATES PLACEHOLDER: Ed's real rates pending (brief: confirm Thursday). Replace the paragraph below once confirmed; never invent numbers. -->
+    <!-- RATES: $1 per mile (Ed via Ellie, 2026-10-15). What it includes (gas, tolls, return flight) is not confirmed yet; don't add it until Ed says. -->
     <div>
       <h2 class="h2">Very reasonable <em>rates.</em></h2>
-      <p class="lede">Every route gets its own flat rate. Call me and I'll give you the price on the phone.</p>
+      <p class="price"><span class="amt">$1</span> per mile</p>
+      <p class="lede">A 1,000-mile trip is $1,000. Call me with where the car is and where it's going, and I'll give you the exact price.</p>
       <a class="bigcall" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>732-300-3835</a>
     </div>
     <form class="est" id="est" novalidate>
@@ -334,7 +337,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <div class="field"><label for="f-when">About when? <i>(optional)</i></label><input id="f-when" name="when" placeholder="For example, early November"></div>
       <button class="btn btn-green" type="submit">Text my details to Ed</button>
       <p class="form-ok" role="status" hidden>If your messages app didn't open, call or text me at <a href="tel:+17323003835">732-300-3835</a>.</p>
-      <p class="form-foot">This opens a text message to me with your details filled in. Send it, and I'll get back to you with your rate. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
+      <p class="form-foot">This opens a text message to me with your details filled in. Send it, and I'll get back to you with the mileage and price. Rather talk? <a href="tel:+17323003835">Call me</a>.</p>
     </form>
   </div>
 </section>
@@ -402,7 +405,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     });
     if (!ok) { first.focus(); return; }
     var v = function (n) { return form.elements[n].value.trim(); };
-    var lines = ["Hi Ed, I'd like a rate for driving my car.", 'Name: ' + v('name'), 'From: ' + v('from'), 'To: ' + v('to')];
+    var lines = ["Hi Ed, I'd like a price for driving my car.", 'Name: ' + v('name'), 'From: ' + v('from'), 'To: ' + v('to')];
     if (v('when')) lines.push('When: ' + v('when'));
     var href = 'sms:' + NUMBER + '?&body=' + encodeURIComponent(lines.join('\n'));
     form.dataset.href = href;

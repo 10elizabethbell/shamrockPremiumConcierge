@@ -260,6 +260,9 @@ Paper on ivory, double gold hairline border, 6px radius, padding 30/24/28 (40/38
 ### How it works steps
 Three numbered steps. Each number sits in a 44px gold-ringed circle (serif lining figures), serif h3 title, one cream-soft sentence. Static: no rail, no moving parts.
 
+### Price line
+In the rates section, under the h2: one row between two 1px rule-dark rules. "$1" in the serif at `clamp(64px, 17vw, 96px)` 600, gold, lining figures, followed by "per mile" in the serif at `clamp(28px, 7.4vw, 36px)` 500, cream, sharing a baseline. A plain sans sentence under it gives a worked example ("A 1,000-mile trip is $1,000"). Keep price changes in this row; don't add a pricing table or calculator without real route mileages from Ed.
+
 ### Estimate form
 Paper card on green, 22px radius, form-float shadow, sets `--ring: gold-deep`. Labels 18px 600 ink above fields; "(optional)" set in normal-weight ink-soft. Inputs white, 1.5px ink-at-28% border, 12px radius, 56px min height; hover and focus switch border and outline to gold-deep. Errors: brick border plus a 17px brick message under the field, linked with `aria-describedby`. Submit is a full-width green button. It composes an SMS, not a server post.
 
@@ -281,7 +284,7 @@ The build carries two sentence-case lines in 17px 600 sans gold-deep above a hea
 - **Do** set facts as ruled lists in serif rows before reaching for cards.
 - **Do** keep body copy at 18px+ and measures at 30-40ch.
 - **Do** swap Ed's photo into the route card when supplied, keeping the ivory double-hairline frame.
-- **Do** put new rates in the rates section, in the stationery card style (paper, double hairline, 6px).
+- **Do** keep the price in the rates section's price line; if Ed adds inclusions (gas, tolls, flight), list them as one plain sentence under the example.
 
 ### Don't:
 - **Don't** add animation of any kind; the page is still.

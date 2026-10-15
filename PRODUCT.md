@@ -19,7 +19,8 @@ Driveaway, not trailer shipping: one driver, the owner, drives your own car betw
 - Route: NJ ↔ Florida, seasonal (Ellie, 2026-10-13).
 - Contact: phone 732-300-3835 (Ed's cell). Calls confirmed; texts unknown. No email, no socials, no listings.
 - Card domain: youflyilldrive.com (currently unregistered per Muse, 2026-10-13).
-- No published prices, insurance details, reviews, photos, hours or years in business.
+- Price: $1 per mile (Ed via Ellie, 2026-10-15); inclusions unknown.
+- No insurance details, reviews, photos, hours or years in business.
 
 ## Brand commitments
 - Name: Shamrock Transportation. Mark: a green shamrock (card). No logo file available yet.
@@ -33,7 +34,7 @@ Driveaway, not trailer shipping: one driver, the owner, drives your own car betw
 - UX research brief for this audience (Ellie, 2026-10-14: "NJ_Florida_Vehicle_Delivery_Website_Research_and_Design_Brief_Ages_40_to_70.pdf", Downloads). Key points: first screen answers what / who / where / how to contact; owner visible as a real person; phone number in the header; static 3-step process; short contact path; no hidden interactions or gratuitous motion; trust questions (insurance, pricing inclusions, reviews) answered only with verified facts.
 
 ## Principles
-1. Never invent: rates, insurance, reviews, photos, towns, years. Unknowns are placeholders or omitted.
+1. Never invent: price inclusions, insurance, reviews, photos, towns, years. Unknowns are placeholders or omitted.
 2. Calling Ed is the primary action, reachable from every section.
 3. Big type and big tap targets for a 40-70 audience on phones; nothing hidden, dragged or hover-only.
 4. Packing the car is a quiet differentiator (mentioned in How it works and the trailer-carrier note); the dedicated Pack it full section was cut by Ellie on 2026-10-14.
