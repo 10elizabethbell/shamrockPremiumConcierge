@@ -109,16 +109,14 @@ section{padding:64px 0 72px}
 .on-dark .lede{color:var(--cream-soft)}
 
 
-/* About Ed + honest note */
+/* About Ed + portrait */
 .about .h2{font-size:clamp(40px,10.5vw,64px)}
 .about-grid{display:grid;gap:44px}
 .facts{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid var(--rule-light)}
 .facts li{padding:14px 0;border-bottom:1px solid var(--rule-light);font:600 clamp(24px,6.4vw,30px)/1.25 var(--serif);color:var(--ink)}
-.honest{padding:30px 24px 28px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;color:var(--ink-soft)}
-.honest h3{font-size:clamp(28px,7.4vw,36px);color:var(--ink)}
-.honest ul{margin:14px 0 0;padding-left:1.1em}
-.honest li{margin-top:8px}
-.honest p{margin-top:16px}
+.portrait{display:grid;place-items:center;aspect-ratio:4/5;width:100%;max-width:440px;border-radius:6px;background:var(--paper);border:1px solid var(--rule-light);outline:1px solid var(--rule-light);outline-offset:-9px;overflow:hidden}
+.portrait svg{width:72px;height:76px;color:var(--rule-light)}
+.portrait img{width:100%;height:100%;object-fit:cover}
 
 /* Estimate */
 .estimate .h2{color:var(--cream)}
@@ -183,7 +181,6 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 
   form.est{padding:40px 38px 36px}
   .foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
-  .honest{padding:40px 38px 36px}
 }
 @media (min-width:960px){
   .about-grid{grid-template-columns:1.1fr 1fr;align-items:start;gap:64px}
@@ -205,7 +202,7 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
 THESIS: Hotel stationery for a night drive: ivory paper, Irish green, muted gold, and road markings between sections. Calm, personal and still; the first screen is a route card (New Jersey to Florida, Ed's car on the line), and the night-drive spirit comes from his card ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and still dashed lane-line dividers like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
-STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
+STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: Ed as the one driver + a frame for his photo, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
 FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
 FORM: Single-scroll one-pager, phone-first, nothing animated. Hero (revised 2026-10-14) is light paper: headline, one Call button, a text link, and a still route card (gold dotted line NJ to Florida with Ed's car on it; swap for Ed's photo when supplied). Night-drive world carried by the still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
@@ -270,15 +267,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
         <li>Airport service anywhere in Florida</li>
       </ul>
     </div>
-    <div class="honest">
-      <h3>When a trailer carrier is the better choice</h3>
-      <ul>
-        <li>The lowest price matters more than when the car arrives.</li>
-        <li>The car doesn't run.</li>
-        <li>It's a collector car you'd rather not put miles on.</li>
-      </ul>
-      <p>For everyone else, having your car driven down, packed, by one person is the easier way.</p>
-    </div>
+    <!-- ED'S PHOTO goes here (placeholder, Ellie 2026-10-15). Replace the <svg> with:
+         <img src="ed.jpg" alt="Edward Brannagan" width="880" height="1100">  (portrait, 4:5) -->
+    <div class="portrait" aria-hidden="true"><svg><use href="#shamrock"/></svg></div>
   </div>
 </section>
 

@@ -109,11 +109,9 @@ components:
     typography: "{typography.route-label}"
     rounded: "{rounded.stationery}"
     padding: "18px 16px 14px"
-  honest-card:
+  portrait-frame:
     backgroundColor: "{colors.paper}"
-    textColor: "{colors.ink}"
     rounded: "{rounded.stationery}"
-    padding: "30px 24px 28px"
   estimate-form:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.ink}"
@@ -136,7 +134,7 @@ components:
 
 The page is the stationery you'd find in the glovebox of a long night drive: ivory and paper sheets, thin gold rules, a serif that looks engraved, deep Irish green for the night. The first screen is a light paper sheet with a still route card on it, a gold dotted line from New Jersey down to Florida with Ed's car on the line. The night-drive spirit is carried by the green sections, the lane-line seams between them, and the motto from Ed's card in the footer, not by moving imagery.
 
-The page alternates paper and green grounds, joined by wavy lane-line seams: paper hero, ivory "Meet your driver", green rates and text form, deepest-green footer. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only three objects on the page are cards (the route card, the trailer-carrier note, the estimate form). Type is big for a 40-70 reader on a phone: body never under 17px, primary actions 60px tall.
+The page alternates paper and green grounds, joined by wavy lane-line seams: paper hero, ivory "Meet your driver", green rates and text form, deepest-green footer. Structure comes from rules and type, not from boxes: lists are ruled, sections are full-bleed, and only three objects on the page are cards (the route card, Ed's portrait frame, the estimate form). Type is big for a 40-70 reader on a phone: body never under 17px, primary actions 60px tall.
 
 Nothing on the page moves. There is no canvas, no animation loop, no scroll effect; the only transitions are the hover/focus outline ring and a 1px button lift. The audience is 40-70; nothing should need to be learned, dragged or opened to be read.
 
@@ -159,7 +157,7 @@ A two-ground palette (green night, ivory/paper day) with one metallic accent tha
 - **Shamrock Leaf** (leaf): the shamrock mark only (wordmark and favicon). Not a UI color.
 
 ### Neutral
-- **Paper** (paper): the hero ground and theme-color; the two cards that sit on ivory or green (trailer-carrier note, estimate form).
+- **Paper** (paper): the hero ground and theme-color; the two cards that sit on ivory or green (Ed's portrait frame, estimate form).
 - **Ivory** (ivory): paper sections (`on-light`: About) and the route card on the paper hero.
 - **Journey Green** (ground-journey): the green button fill; the route card's pins and car body.
 - **Night Green** (ground-night): estimate section ground and the page's base background.
@@ -186,7 +184,7 @@ The old night-highway colors are retired: taillight red is gone with the canvas,
 ### Hierarchy
 - **Display**: hero h1 only, ink. Second line italic 500 in gold-deep, on its own line. Steps to Display Wide (fixed 96px) from 1100px.
 - **Headline**: section h2, below the hero h1; the about h2 drops to `clamp(40px, 10.5vw, 64px)`.
-- **Title**: h3 for the trailer-carrier note and form titles (28-38px by context).
+- **Title**: h3 for the form title (28-38px by context).
 - **List item**: ruled serif rows (about facts 600 at `clamp(24px, 6.4vw, 30px)` / 1.25).
 - **Route label**: serif 600 at 25px inside the route card ("New Jersey", "Florida"); the wordmark "Shamrock" is set at the same size (28px in the footer, 22px under 370px).
 - **Phone number**: serif 600 `clamp(42px, 12vw, 72px)`, lining tabular figures, gold. The number is set as type, not as a button.
@@ -224,13 +222,13 @@ Mostly flat: depth comes from the ground alternation and from the stationery car
 - **Soft** (`--shadow-soft`): green button. Its alpha is currently mixed from black, which breaks the Never-Black Rule; retint it from ground-deepest (`rgba(6,26,19,…)`) like the form float. Do not copy the black value.
 - **Form float** (`0 30px 60px -30px rgba(6,26,19,.6)`): estimate form on green.
 
-The route card and trailer-carrier note carry no shadow; they are flat stationery defined by their double hairline.
+The route card and portrait frame carry no shadow; they are flat stationery defined by their double hairline.
 
 **The Lit-From-Above Rule.** Every shadow falls straight down with a negative spread, so it reads as ambient light under an object, never a hard offset or a glow halo.
 
 ## Shapes
 
-Round where you touch, square-ish where you read. Buttons are full pills (999px); the direction contract said "no pills", but the build ships pill buttons and they are recorded here as the system (no pill-shaped chips or tags exist). Inputs are gently rounded (12px), the estimate form generously (22px). The route card and trailer-carrier note are near-square (6px), drawn as stationery: a 1px rule-light border plus a second 1px rule inset 9px (outline with negative offset), the double-ruled border of a hotel card. Focus rings round to 4px. Dividers are never straight lines between grounds: see Lane-line dividers.
+Round where you touch, square-ish where you read. Buttons are full pills (999px); the direction contract said "no pills", but the build ships pill buttons and they are recorded here as the system (no pill-shaped chips or tags exist). Inputs are gently rounded (12px), the estimate form generously (22px). The route card and portrait frame are near-square (6px), drawn as stationery: a 1px rule-light border plus a second 1px rule inset 9px (outline with negative offset), the double-ruled border of a hotel card. Focus rings round to 4px. Dividers are never straight lines between grounds: see Lane-line dividers.
 
 ## Components
 
@@ -254,8 +252,8 @@ A 44px (60px from 760px) SVG seam between every pair of grounds, including hero 
 ### Ruled lists
 About facts (serif rows: routes and services from the card).
 
-### Trailer-carrier note (stationery)
-Paper on ivory, double gold hairline border, 6px radius, padding 30/24/28 (40/38/36 from 760px). Ink h3, a short bulleted list, one closing line. The real rates table, once Ed confirms, should use this same card style inside the rates section.
+### Portrait frame (stationery)
+Paper on ivory beside the about copy (below it on phones), double gold hairline border, 6px radius, 4:5 portrait, max 440px wide. Holds Ed's photo (`object-fit: cover`). Until he sends one it shows only a faint rule-coloured shamrock, centred, with no text, and is hidden from screen readers. When the photo lands: swap the svg for an `<img>` with alt "Edward Brannagan" and drop `aria-hidden`.
 
 ### Price line
 In the rates section, under the h2: one row between two 1px rule-dark rules. "$1" in the serif at `clamp(64px, 17vw, 96px)` 600, gold, lining figures, followed by "per mile" in the serif at `clamp(28px, 7.4vw, 36px)` 500, cream, sharing a baseline. A plain sans sentence under it asks the reader to call for the exact price. Keep price changes in this row; don't add a pricing table or calculator without real route mileages from Ed.
@@ -287,7 +285,7 @@ The build carries two sentence-case lines in 17px 600 sans gold-deep above a hea
 - **Don't** add animation of any kind; the page is still.
 - **Don't** use black or neutral grey anywhere, including shadows.
 - **Don't** use gold (light) text on ivory or paper, or gold-deep on green; it fails contrast on the wrong ground.
-- **Don't** wrap sections or list rows in cards; the route card, the trailer-carrier note and the estimate form are the only cards.
+- **Don't** wrap sections or list rows in cards; the route card, the portrait frame and the estimate form are the only cards.
 - **Don't** add hover fills or color-swap hovers; hover is the outline ring.
 - **Don't** add more eyebrows above headings.
 - **Don't** make anything draggable, hover-driven or hidden behind a tap; this audience shouldn't have to discover how the page works.
