@@ -7,14 +7,14 @@
 - **Hero (replaced 2026-10-14, Ellie: the night-highway hero was too much for this audience):** light paper first screen with the headline, one sentence naming Ed, ONE green Call button, an "or text me instead" link, and a still route card (gold dotted line from a New Jersey pin to a Florida pin with Ed's car on it). It's built to swap for a photo of Ed beside a car once he supplies one. **Nothing on the page animates now:** the hero canvas and its script are deleted.
 - **Carried through the page:** still, wavy section seams with a gold dashed lane marking painted just inside the lower colour. Nothing below the hero moves.
 - **Simplified 2026-10-14 (Ellie: audience is 40-70, first version was too much):** removed the drivable car, the drag hint, the moving seams and the scroll-driven step car; cut "Where I drive", the separate rates card, the 3-part trust list and the FAQ accordion (no hidden content now); form cut from 6 fields to 4 with plain-question labels.
-- **Sections (4 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, promise names Ed) → How it works (numbered 1-2-3: Call me / Fly / Your car is waiting) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." ($1 per mile, huge tap-to-call number, text form) → footer.
+- **Sections (3 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, promise names Ed) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a visible note on when a trailer carrier is the better choice) → "Very reasonable rates." ($1 per mile, huge tap-to-call number, text form) → footer.
 - **Contact:** every call link is `tel:+17323003835`. The estimate form (name, where the car is, where it's going, optional when) validates the three required fields (errors linked to the fields for screen readers) and opens a pre-filled text to the same number (tested: the body decodes correctly). While it opens, the button reads "Opening your messages…", then a line appears with the number in case nothing opened (desktop and some in-app browsers ignore `sms:`). Hero has exactly two buttons: Call Ed (filled gold) and Get your rate (outlined).
 - **Reviewed:** Impeccable's detector plus a sweep of every mode except live/onboard, and the finish reviewer (verdict "fix first"); all their material fixes are applied. Detector leftovers are intentional and recorded in `.impeccable/config.json` (tight leading on display headings; green-tinted offset shadow flagged as a glow).
 - **Shareables:** `og.png` 1200x630 for the Facebook preview (currently the light hero with the route card), shamrock favicon (SVG) and `apple-touch-icon.png`.
 
 ## Research brief applied (2026-10-14)
 Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
-- Header: Ed's number as a tap-to-call link on every screen size; desktop adds 3 plain links (How it works, Meet Ed, Rates).
+- Header: Ed's number as a tap-to-call link on every screen size; desktop adds 2 plain links (Meet Ed, Rates).
 - Hero answers what / who / where / contact in one screen: eyebrow "Personal car delivery · New Jersey & Florida", promise now opens "I'm Ed Brannagan" and says you talk to him directly. Second action is now an "or text me instead" link (jumps to the text form).
 - "Meet your driver" label over the about section; form now says what happens next ("I'll get back to you with your rate").
 - Not applied, on purpose:
@@ -59,7 +59,7 @@ Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70
 - A real photo of Ed beside the "One driver: me" line would be the strongest trust signal on the page.
 - A few sample routes with mileage and price (e.g. "Toms River → Naples") once Ed names his usual towns, so readers see real numbers without calling.
 - If the hero's `PHONE` layout should switch live when a tablet rotates past 760px, recompute it in `size()` (it's read once at load now).
-- Cut in the simplification, easy to restore from git history if wanted: the "Pack it full" section (cut 2026-10-14; commit e76e727 has it), the drivable hero car, the FAQ accordion, the trust three-up, the scroll car in "How it works", the optional Car and Notes form fields.
+- Cut in the simplification, easy to restore from git history if wanted: the "Pack it full" section (cut 2026-10-14; commit e76e727 has it), the "How it works" steps (cut 2026-10-15; commit 48416c8 has them), the drivable hero car, the FAQ accordion, the trust three-up, the scroll car in "How it works", the optional Car and Notes form fields.
 - Sibling builds `shamrockOwnerTrust` and `shamrockTransparentPricing` were running at the same time. Check that they didn't land on the same highway world.
 
 ## Not verified

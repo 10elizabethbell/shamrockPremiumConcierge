@@ -28,7 +28,7 @@
 :root{
   --g-950:#0d2b21;   /* footer: deepest green, never black */
   --g-900:#11352a;   /* estimate ground */
-  --g-800:#174233;   /* journey */
+  --g-800:#174233;   /* green button */
   --leaf:#46a96a;    /* shamrock */
   --ivory:#f5efe2;   /* paper sections */
   --paper:#fbf8f1;   /* form card */
@@ -115,15 +115,6 @@ section{padding:64px 0 72px}
 .on-dark .lede{color:var(--cream-soft)}
 
 
-/* How it works (journey) */
-.journey{background:var(--g-800)}
-.steps{list-style:none;counter-reset:step;margin:36px 0 0;padding:0;max-width:640px}
-.steps li{counter-increment:step;position:relative;padding:0 0 32px 64px}
-.steps li:last-child{padding-bottom:0}
-.steps li::before{content:counter(step);position:absolute;left:0;top:2px;width:44px;height:44px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;font:600 24px/1 var(--serif);font-variant-numeric:lining-nums;color:var(--gold)}
-.steps h3{font-size:clamp(32px,8.2vw,42px);color:var(--cream)}
-.steps p{margin-top:6px;color:var(--cream-soft);max-width:36ch}
-
 /* About Ed + honest note */
 .about .h2{font-size:clamp(40px,10.5vw,64px)}
 .about-grid{display:grid;gap:44px}
@@ -202,8 +193,6 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 
   form.est{padding:40px 38px 36px}
   .foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}
-  .steps{margin-top:0}
-  .journey .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:64px;align-items:start}
   .honest{padding:40px 38px 36px}
 }
 @media (min-width:960px){
@@ -226,7 +215,7 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
 DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
 THESIS: Hotel stationery for a night drive: ivory paper, Irish green, muted gold, and road markings between sections. Calm, personal and still; the first screen is a route card (New Jersey to Florida, Ed's car on the line), and the night-drive spirit comes from his card ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and still dashed lane-line dividers like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
-STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: how it works in three numbered steps, Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
+STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
 FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left, tap-to-call number top-right; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed and NJ-Florida; full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
 FORM: Single-scroll one-pager, phone-first, nothing animated. Hero (revised 2026-10-14) is light paper: headline, one sentence, one Call button, a text link, and a still route card (gold dotted line NJ to Florida with Ed's car on it; swap for Ed's photo when supplied). Night-drive world carried by the still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
@@ -245,7 +234,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <svg style="color:var(--leaf)" aria-hidden="true"><use href="#shamrock"/></svg>
       <span><b>Shamrock</b><small>Transportation</small></span>
     </a>
-    <nav class="top-nav" aria-label="Sections"><a href="#how">How it works</a><a href="#about">Meet Ed</a><a href="#estimate">Rates</a></nav>
+    <nav class="top-nav" aria-label="Sections"><a href="#about">Meet Ed</a><a href="#estimate">Rates</a></nav>
     <a class="top-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>732-300-3835</a>
   </div>
 
@@ -278,20 +267,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 </header>
 
 <main>
-<div class="lane" data-from="#fbf8f1" data-to="#174233" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
-
-<section class="journey on-dark" id="how">
-  <div class="wrap">
-    <h2 class="h2">How it works</h2>
-    <ol class="steps">
-      <li><h3>Call me</h3><p>Tell me where the car is, where it's going, and the day you fly.</p></li>
-      <li><h3>Fly</h3><p>Hand me the keys and catch your flight. I drive the car myself.</p></li>
-      <li><h3>Your car is waiting</h3><p>It's there when you land, packed the way you left it.</p></li>
-    </ol>
-  </div>
-</section>
-
-<div class="lane" data-from="#174233" data-to="#f5efe2" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
+<div class="lane" data-from="#fbf8f1" data-to="#f5efe2" aria-hidden="true"><svg><path class="fl"/><path class="ln"/></svg></div>
 
 <section class="about on-light" id="about">
   <div class="wrap about-grid">
