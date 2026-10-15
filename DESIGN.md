@@ -208,7 +208,7 @@ Single-scroll, phone-first one-pager. Content sits in a centered wrap (max 1160p
 **Breakpoints** (min-width unless noted):
 - **base (phone)**: everything stacks; the hero Call button is full-width (max 420px) with the text link beside or under it; the route card sits below the hero copy.
 - **max 370px**: narrower gutter, smaller button text and padding, smaller wordmark and phone link.
-- **760px**: gutter 40px, body 19px, top-bar nav links appear, the eyebrow gains " · New Jersey & Florida", the hero goes two-column (copy left, route card right, 64px gap), the Call button sizes to content, footer 3 columns. Lane seams 44 to 60px tall.
+- **760px**: gutter 40px, body 19px, top-bar nav links appear the hero goes two-column (copy left, route card right, 64px gap), the Call button sizes to content, footer 3 columns. Lane seams 44 to 60px tall.
 - **960px**: about and estimate go two-column (64px gap).
 - **1100px**: hero h1 fixed at 96px.
 
@@ -267,7 +267,7 @@ Paper card on green, 22px radius, form-float shadow, sets `--ring: gold-deep`. L
 The top bar is the shamrock wordmark (leaf-green mark, serif "Shamrock", tracked "Transportation") on the left and Ed's number as a tap-to-call link (gold-deep phone icon, ink 16-19px, never wraps) on the right, at every width. On the paper hero the wordmark is ink with a gold-deep sub-label; in the footer it is cream with a gold sub-label. From 760px two plain text links (17px 500, ink-soft) sit before the number: Meet Ed, Rates. No menu button, no dropdown. Both wordmarks link back to the top.
 
 ### Eyebrow
-The build carries two sentence-case lines in 17px 600 sans gold-deep above a heading: the hero ("Personal car delivery", plus " · New Jersey & Florida" from 760px) and "Meet your driver" above the about h2. **The Eyebrow Rule.** These two are the limit: add no new eyebrows, and never set one in caps or tracking. A new section introduces itself with its heading.
+The build carries two sentence-case lines in 17px 600 sans gold-deep above a heading: the hero ("Personal car delivery · New Jersey & Florida" at every width, the place name kept on one line) and "Meet your driver" above the about h2. **The Eyebrow Rule.** These two are the limit: add no new eyebrows, and never set one in caps or tracking. A new section introduces itself with its heading.
 
 ### Motion
 **The Still Page Rule.** Add no animation. No canvas, no rAF loop, no scroll-triggered effects, no autoplay, no moving imagery. The only transitions allowed are the hover/focus outline ring (0.2s), color and border changes (0.2-0.3s), and the 1px button lift (0.5s on `--ease-out`). Under reduced motion, transitions collapse to 0.01ms and smooth scroll turns off.

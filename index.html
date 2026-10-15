@@ -84,7 +84,6 @@ p{margin:0;text-wrap:pretty}
 .hero .brand small{color:var(--gold-deep)}
 .eyebrow{font:600 17px/1.4 var(--sans);color:var(--gold);margin-bottom:12px}
 .on-light .eyebrow{color:var(--gold-deep)}
-.eb-route{display:none}
 .top-call{white-space:nowrap}
 
 /* ---------- Hero ---------- */
@@ -180,7 +179,6 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   :root{--gutter:40px}
   body{font-size:19px}
   .top{padding-top:28px}
-  .eb-route{display:inline}
   .top-nav{display:flex;gap:28px;margin-left:auto;margin-right:36px;font:500 17px/1 var(--sans);color:var(--ink-soft)}
   .top-nav a{padding:12px 2px}
   .top-call{font-size:19px}
@@ -216,7 +214,7 @@ DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
 THESIS: Hotel stationery for a night drive: ivory paper, Irish green, muted gold, and road markings between sections. Calm, personal and still; the first screen is a route card (New Jersey to Florida, Ed's car on the line), and the night-drive spirit comes from his card ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and still dashed lane-line dividers like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
 STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
-FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left, tap-to-call number top-right; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed and NJ-Florida; full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
+FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left, tap-to-call number top-right; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed (keys, flight, car down to Florida and back in spring); full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
 FORM: Single-scroll one-pager, phone-first, nothing animated. Hero (revised 2026-10-14) is light paper: headline, one sentence, one Call button, a text link, and a still route card (gold dotted line NJ to Florida with Ed's car on it; swap for Ed's photo when supplied). Night-drive world carried by the still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
@@ -240,9 +238,9 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 
   <div class="hero-grid">
     <div>
-      <p class="eyebrow">Personal car delivery<span class="eb-route"> · New Jersey &amp; Florida</span></p>
+      <p class="eyebrow">Personal car delivery · <span style="white-space:nowrap">New Jersey &amp; Florida</span></p>
       <h1>You fly.<em>I'll drive.</em></h1>
-      <p class="promise">I'm Ed Brannagan. I drive your car between <strong>New Jersey and Florida</strong> myself while you fly, and you talk to me directly.</p>
+      <p class="promise">I'm Ed Brannagan. Hand me the keys, catch your flight, and I'll bring your car down to Florida, and back up in the spring.</p>
       <div class="hero-actions">
         <a class="btn btn-green" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>Call Ed <span class="num">732-300-3835</span></a>
         <a class="text-link" href="#est">or text me instead</a>
