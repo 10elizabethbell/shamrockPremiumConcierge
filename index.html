@@ -76,15 +76,12 @@ p{margin:0;text-wrap:pretty}
 .brand small{display:block;margin-top:4px;font:600 12.5px/1 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--gold)}
 .arw{display:inline-block;width:1.4em;height:.7em;vertical-align:middle;margin:0 .3em;color:var(--gold)}
 .top-nav{display:none}
-.top-nav a,.top-call{text-decoration:none;border-radius:6px;outline:2px solid transparent;outline-offset:4px;transition:outline-color .2s}
-.top-nav a:hover,.top-call:hover{outline-color:var(--ring)}
-.top-call{display:flex;align-items:center;gap:7px;min-height:48px;padding:0 2px;font:600 17px/1 var(--sans);font-variant-numeric:tabular-nums;color:var(--ink)}
-.top-call svg{width:19px;height:19px;color:var(--gold-deep)}
+.top-nav a{text-decoration:none;border-radius:6px;outline:2px solid transparent;outline-offset:4px;transition:outline-color .2s}
+.top-nav a:hover{outline-color:var(--ring)}
 .hero .brand b{color:var(--ink)}
 .hero .brand small{color:var(--gold-deep)}
 .eyebrow{font:600 17px/1.4 var(--sans);color:var(--gold);margin-bottom:12px}
 .on-light .eyebrow{color:var(--gold-deep)}
-.top-call{white-space:nowrap}
 
 /* ---------- Hero ---------- */
 .hero{background:var(--paper)}
@@ -170,19 +167,16 @@ footer{background:var(--g-950);color:var(--cream-soft);padding:56px 0 calc(48px 
   .btn{font-size:18px;padding:0 18px}
   .brand b{font-size:22px}
   .brand small{letter-spacing:.14em}
-  .top-call{font-size:16px}
-  .top-call svg{width:16px;height:16px}
-}
+    }
 
 /* ---------- Desktop ---------- */
 @media (min-width:760px){
   :root{--gutter:40px}
   body{font-size:19px}
   .top{padding-top:28px}
-  .top-nav{display:flex;gap:28px;margin-left:auto;margin-right:36px;font:500 17px/1 var(--sans);color:var(--ink-soft)}
+  .top-nav{display:flex;gap:28px;margin-left:auto;font:500 17px/1 var(--sans);color:var(--ink-soft)}
   .top-nav a{padding:12px 2px}
-  .top-call{font-size:19px}
-  .hero-actions .btn{width:auto}
+    .hero-actions .btn{width:auto}
   .hero-grid{grid-template-columns:1.1fr 1fr;align-items:center;gap:64px;padding-top:56px;padding-bottom:48px}
   .route-card{padding:28px 26px 22px}
   section{padding:104px 0 112px}
@@ -214,7 +208,7 @@ DIRECTION CONTRACT — Shamrock Transportation (Vibe 1: premium concierge)
 THESIS: Hotel stationery for a night drive: ivory paper, Irish green, muted gold, and road markings between sections. Calm, personal and still; the first screen is a route card (New Jersey to Florida, Ed's car on the line), and the night-drive spirit comes from his card ("Life is a Highway... Drive it All Night Long", from his card).
 OWN-WORLD: Deep Irish green night ground (never black), ivory hotel-stationery paper, muted gold trim, Cormorant Garamond display (italic for the turn of phrase), system sans body at 18px+. Thin gold rules and still dashed lane-line dividers like road markings. Soft green-tinted shadows. No cards-as-structure, no pills.
 STORY: Visitor learns in one screen: you fly, Ed drives your car between NJ and Florida, call him. Then: Ed as the one driver + when a trailer is better, rates by phone + text form. Revised 2026-10-14 for a 40-70 audience: fewer moving parts, nothing to learn, no hidden content.
-FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left, tap-to-call number top-right; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed (keys, flight, car down to Florida and back in spring); full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
+FIRST VIEWPORT (phone 390x~660): shamrock wordmark top-left; "Personal car delivery" eyebrow; "You fly. / I'll drive." serif, second line gold-deep italic; one sentence naming Ed (keys, flight, car down to Florida and back in spring); full-width green "Call Ed" button with the number; "or text me instead" link; the still route card starts just below.
 FORM: Single-scroll one-pager, phone-first, nothing animated. Hero (revised 2026-10-14) is light paper: headline, one sentence, one Call button, a text link, and a still route card (gold dotted line NJ to Florida with Ed's car on it; swap for Ed's photo when supplied). Night-drive world carried by the still lane-line dividers. Code-led build (no comp round, unattended); concept roll skipped (unattended, no one to pick), runner-up world in HANDOFF.md.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
 -->
@@ -233,7 +227,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       <span><b>Shamrock</b><small>Transportation</small></span>
     </a>
     <nav class="top-nav" aria-label="Sections"><a href="#about">Meet Ed</a><a href="#estimate">Rates</a></nav>
-    <a class="top-call" href="tel:+17323003835"><svg aria-hidden="true"><use href="#phone"/></svg>732-300-3835</a>
   </div>
 
   <div class="hero-grid">

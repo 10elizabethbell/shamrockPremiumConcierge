@@ -14,11 +14,11 @@
 
 ## Research brief applied (2026-10-14)
 Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
-- Header: Ed's number as a tap-to-call link on every screen size; desktop adds 2 plain links (Meet Ed, Rates).
+- Header: wordmark only; desktop adds 2 plain links (Meet Ed, Rates). The number was in the header too, but Ellie removed it on 2026-10-15 because the hero's Call Ed button already shows it.
 - Hero answers what / who / where / contact in one screen: eyebrow "Personal car delivery · New Jersey & Florida", promise now opens "I'm Ed Brannagan" and says you talk to him directly. Second action is now an "or text me instead" link (jumps to the text form).
 - "Meet your driver" label over the about section; form now says what happens next ("I'll get back to you with your rate").
 - Not applied, on purpose:
-  - **Sticky mobile Call button:** conflicts with your no-sticky-bar rule. The number is in the header and the first button instead. Your call.
+  - **Sticky mobile Call button:** conflicts with your no-sticky-bar rule. The number is on the hero's Call Ed button instead. Your call.
   - **Portrait / Meet Your Driver photo, reviews, insurance, credentials, pricing inclusions, insurance/timing/mileage FAQ:** need real facts from Ed. Not invented; listed in the questions below.
   - **Inter / Atkinson body font, warm-white page, 32-48px headings:** would replace the premium vibe you asked to keep. Body is already system sans at 18-19px; the big serif headings stay.
   - **"Free quote" wording:** Ed hasn't said quotes are free; buttons say "Call Ed" and "rate".
