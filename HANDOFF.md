@@ -26,7 +26,7 @@ Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70
 ## Assumptions I made
 - **Shamrock mark is drawn by me**, not traced from Ed's card (no card scan was available, and the brief says to ask before using it publicly). It's a simple three-leaf shamrock in a mid green. Swap in the real emblem once Ed or Ellie OKs the card photo.
 - **Headline "You fly. I'll drive."** comes from the card's domain (youflyilldrive.com).
-- **About section** ("I drive one car at a time, and the number on this page is my cell") is marked `<!-- CONFIRM WITH ED -->` in the HTML: the brief says Ed is the only *known* driver.
+- **About section** ("I drive one car at a time, and care for it like it's my own", wording from Ellie 2026-10-15) is marked `<!-- CONFIRM WITH ED -->` in the HTML: the brief says Ed is the only *known* driver.
 - **"Airport service anywhere in Florida"** is verbatim from the card. I didn't say what it includes (dropping the car at the airport? picking him up?).
 - **Footer tagline** "Life is a Highway… Drive it All Night Long" is verbatim from the card. "All night long" might worry a careful 60+ customer, so consider cutting it.
 - **Colors:** deep Irish green #11352a and gold #c9a96a, picked from Muse/Ellie's direction rather than sampled from the card.
