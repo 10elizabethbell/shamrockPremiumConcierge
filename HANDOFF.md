@@ -10,7 +10,7 @@
 - **Sections (3 + footer):** hero ("You fly. I'll drive.", from the card's domain youflyilldrive.com; eyebrow says the service, the Call Ed button names him; no sentence under the headline since 2026-10-15) → "The man you call is the man who drives" (Ed, one car at a time, the card's services as a short list, plus a frame for Ed's photo) → "Very reasonable rates." ($1 per mile, huge tap-to-call number, text form) → footer.
 - **Contact:** every call link is `tel:+17323003835`. The estimate form (name, where the car is, where it's going, optional when) validates the three required fields (errors linked to the fields for screen readers) and opens a pre-filled text to the same number (tested: the body decodes correctly). While it opens, the button reads "Opening your messages…", then a line appears with the number in case nothing opened (desktop and some in-app browsers ignore `sms:`). Hero has exactly two buttons: Call Ed (filled gold) and Get your rate (outlined).
 - **Reviewed:** Impeccable's detector plus a sweep of every mode except live/onboard, and the finish reviewer (verdict "fix first"); all their material fixes are applied. Detector leftovers are intentional and recorded in `.impeccable/config.json` (tight leading on display headings; green-tinted offset shadow flagged as a glow).
-- **Shareables:** `og.png` 1200x630 for the Facebook preview (currently the light hero with the route card), shamrock favicon (SVG) and `apple-touch-icon.png`.
+- **Shareables:** `og.png` 1200x630 for the Facebook preview (currently the light hero with the route card), shamrock `favicon.svg` and `apple-touch-icon.png` (engraved shamrock since 2026-10-15).
 
 ## Research brief applied (2026-10-14)
 Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70) was applied where it fits the vibe and the facts we have:
@@ -24,7 +24,7 @@ Ellie's "Designing for trust, clarity, and effortless contact" brief (ages 40-70
   - **"Free quote" wording:** Ed hasn't said quotes are free; buttons say "Call Ed" and "rate".
 
 ## Assumptions I made
-- **Shamrock mark is drawn by me**, not traced from Ed's card (no card scan was available, and the brief says to ask before using it publicly). It's a simple three-leaf shamrock in a mid green. Swap in the real emblem once Ed or Ellie OKs the card photo.
+- **Shamrock mark (changed 2026-10-15):** the engraved line shamrock Ellie chose for every Shamrock site, copied exactly from `shamrockElegant/brand/` into `brand/` (only the colour changed: ink green in the header, leaf green in the footer, pale gold in the photo frame). `favicon.svg` and `apple-touch-icon.png` are byte-for-byte copies of Elegant's (deep green tile #0f4434, a hair different from this site's #11352a). `og.png` re-rendered with it. Still not Ed's card emblem.
 - **Headline "You fly. I'll drive."** comes from the card's domain (youflyilldrive.com).
 - **About section** ("I drive one car at a time, and care for it like it's my own", wording from Ellie 2026-10-15) is marked `<!-- CONFIRM WITH ED -->` in the HTML: the brief says Ed is the only *known* driver.
 - **"Airport service anywhere in Florida"** is verbatim from the card. I didn't say what it includes (dropping the car at the airport? picking him up?).

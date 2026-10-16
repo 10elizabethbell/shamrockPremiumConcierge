@@ -154,7 +154,7 @@ A two-ground palette (green night, ivory/paper day) with one metallic accent tha
 - **Antique Gold** (gold-deep): the same gold, darkened to read on ivory and paper. Hero italic line, the hero wordmark sub-label, top-bar phone icon, eyebrow text, the route card's dotted line, text-link underline, hover/focus ring on light grounds, input focus border, caret.
 
 ### Secondary
-- **Shamrock Leaf** (leaf): the shamrock mark only (wordmark and favicon). Not a UI color.
+- **Shamrock Leaf** (leaf): the footer shamrock only. Not a UI color. The mark is the engraved line shamrock shared across Ellie's Shamrock sites (2026-10-15), copied byte for byte into `brand/` from shamrockElegant with only the `color` attribute changed: `shamrock-small-ink.svg` (header, 44px), `shamrock-small-leaf.svg` (footer, 44px), `shamrock-frame.svg` (photo frame placeholder, 88px, #d7cab1 = rule-light flattened onto paper; it needs an opaque colour), `shamrock-ink.svg` (og.png). Small files for 16-48px, large ones for 64px up. Never redraw it, change line weights, or put it in a badge, tile, ring, glow or shadow. Rules in `brand/README.md`.
 
 ### Neutral
 - **Paper** (paper): the hero ground and theme-color; the two cards that sit on ivory or green (Ed's portrait frame, estimate form).

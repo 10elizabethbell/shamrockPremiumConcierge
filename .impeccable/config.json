@@ -110,6 +110,11 @@
         "value": "inline <svg> scene: 9 primitive shapes, ~360x260px, 4 fill colors",
         "createdAt": "2026-10-14T22:31:57.468Z",
         "reason": "deliberate still route diagram (NJ pin, dotted route, FL pin, car) chosen over animation for a 40-70 audience; placeholder slot for Ed's photo"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d7cab1",
+        "createdAt": "2026-10-15T23:31:03.452Z"
       }
     ]
   }
